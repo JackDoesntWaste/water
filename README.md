@@ -36,7 +36,7 @@ CREAZIONE ANIMAZIONE (JACK cammina)
 ```
 Jack.addAnimation("moving", "images/Jack_walk1.png", "images/Jack_walk2.png");
 ```
-![GitHub Logo](/README/Jack_moving.gif)
+![Jack_moving](/README/Jack_moving.gif)
 
 VELOCITA' (JACK CAMMINA e si muove)
 ```
@@ -46,7 +46,7 @@ if(mouseX > Jack.position.x + 10 && moving==true) {
     Jack.velocity.x = 5
 }
  ```
-![GitHub Logo](/README/Jack_walking.gif)
+![Jack_walking](/README/Jack_walking.gif)
 
 CHANGE ANIMATION (piatti)
 ```
@@ -63,12 +63,12 @@ CHANGE ANIMATION (piatti)
 
 GLOW <br>
 The glow è settato col tempo `timeGardenGlow = setInterval(gardenGlow,timeGlow);` e al passaggio del mouse `Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}`<br><br>
-![GitHub Logo](/README/glow_mouse.gif) &nbsp; ![GitHub Logo](/README/glow_time.gif)
+![glow_mouse](/README/glow_mouse.gif) &nbsp; ![glow_time](/README/glow_time.gif)
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
 wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
 
-![wavePercent](/README/Circular-Water-Fill-Loading-Animation.gif)
+![wavepercent](/README/wavepercent.gif) &nbsp; ![waves](/README/waves.gif)
 
 
 Dire magari la fonte del file musicale?
