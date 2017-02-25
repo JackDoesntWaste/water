@@ -1840,11 +1840,11 @@ function shareOptions() {
 }
 
 function shareFb() {
-    window.open("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbit.ly%2FJackDoesntWaste&picture=https%3A%2F%2Fgithub.com%2FJackDoesntWaste%2Fwater%2Fblob%2Fmaster%2Fimages%2Fcard.png%3Fraw%3Dtrue&title=How+much+water+do+you+use%3F&caption=&quote=%23JackDoesntWaste&description=Let%27s+find+it+out+with+Jack+%3A%29",'_blank');
+    window.open("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbit.ly%2FJackDoesntWaste&picture=https%3A%2F%2Fgithub.com%2FJackDoesntWaste%2Fwater%2Fblob%2Fmaster%2Fimages%2Fcard.png%3Fraw%3Dtrue&title=How+much+water+do+you+use%3F&caption=%23JackDoesntWaste&quote=&description=Let%27s+find+it+out+with+Jack+%3A%29",'_blank');
 }
 
 function shareTw() {
-    window.open("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbit.ly%2FJackDoesntWaste&picture=https%3A%2F%2Fgithub.com%2FJackDoesntWaste%2Fwater%2Fblob%2Fmaster%2Fimages%2Fcard.png%3Fraw%3Dtrue&title=How+much+water+do+you+use%3F&caption=%23JackDoesntWaste&quote=&description=Let%27s+find+it+out+with+Jack+%3A%29",'_blank');
+    window.open("https://twitter.com/share?url=https://bit.ly/JackDoesntWaste&amp;text=How%20much%20water%20do%20you%20use?%20Let's%20find%20it%20out%20on&amp;hashtags=waterWaste",'_blank');
 }
 
 function sharePin() {
