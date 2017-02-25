@@ -25,9 +25,8 @@ bottoni (tipo da disattivare)
 #### [p5](https://p5js.org/)
 #### [p5.dom](https://p5js.org/reference/#/libraries/p5.dom)
 #### [p5.sound](https://p5js.org/reference/#/libraries/p5.sound)
-```
-    analyzer.setInput(mySound);
-```
+We used this library to load and analyze the sound. For example `analyzer.setInput(mySound);` allows us to play and stop the music in certain cases.
+
 #### [p5.play](http://p5play.molleindustria.org/)
 provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. We used this library to create animations for our project, to move and interact with Jack.
 
