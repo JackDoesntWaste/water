@@ -70,7 +70,7 @@ if(mouseX > Jack.position.x + 10 && moving==true) {
 ```
     if (pressDone3==true) {
             Dish.changeAnimation("Dish_none");
-            moving=true;  //<<AGGIUNGI
+            moving=true;
         } else if (pressHands==true){
             Dish.changeAnimation("Sink");
         } else if (pressDishwasher==true){
@@ -87,9 +87,8 @@ The glow è settato col tempo `timeSinkGlow = setInterval(sinkGlow,timeGlow)` e 
 created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
 
 ![wavepercent](/README/wavepercent.gif)![waves](/README/waves.gif)
-
-
-Dire magari la fonte del file musicale? 
+<br>
+#### Music: [Royalty Free Music from Bensound](http://www.bensound.com/royalty-free-music/track/cute)
 
 # AUTHORS/TEAM
 ...is developed by:
