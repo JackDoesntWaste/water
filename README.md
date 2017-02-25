@@ -1,34 +1,33 @@
 ![GitHub Logo](/README/header.jpg)
 
-# About :fish:
+# About
 
 Title is a university project, developed during the course Creative Coding at the Politecnico di Milano.
 The goal was to design an interactive app about an *Out of scale* topic. 
 
-
-## Project idea
+# Project idea
 
 The theme is the **waste of water** in home environment. The user has the chance to take an experience otherwise impossible through a guided path that allows/helps him to find out how much water he wastes. 
 Jack drives the user in 3 different rooms of the house (bathroom, kitchen and laundry room) where the user has to answer questions about his weekly use of water. The experience ends showing him how much water was used and wasted in 1 week on average.
 The water waste is graphically represented using as unit a tub full of water.  
 
-## Development
+# Development
 
 (e qui dire tutto sul codice, le librerie utilizzate in js, l'aggiunta di CSS e qualcosa in html (le onde) ecc ecc. ((magari aggiungere dei pezzi di codice e img come Jack che hai già inserito)) Dire anche come abbiamo calcolato effettivamente la quantità d'acqua.
 
-### Difficulties
+## Difficulties
 L’inserimento di codici esterni.
 L’uso delle condizioni (?!)
 l’unione di diversi codici
 bottoni (tipo da disattivare)
 
-### Resources
-#### [p5](https://p5js.org/)
-#### [p5.dom](https://p5js.org/reference/#/libraries/p5.dom)
-#### [p5.sound](https://p5js.org/reference/#/libraries/p5.sound)
+## Resources
+### [p5](https://p5js.org/)
+### [p5.dom](https://p5js.org/reference/#/libraries/p5.dom)
+### [p5.sound](https://p5js.org/reference/#/libraries/p5.sound)
 We used this library to load and analyze the sound. For example `analyzer.setInput(mySound);` allows us to play and stop the music in certain cases.
 
-#### [p5.play](http://p5play.molleindustria.org/)
+### [p5.play](http://p5play.molleindustria.org/)
 provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. 
 
 > We used this library to create animations for our project, to move and interact with Jack.
@@ -65,7 +64,7 @@ CHANGE ANIMATION (piatti)
 GLOW
 The glow è settato col tempo `timeGardenGlow = setInterval(gardenGlow,timeGlow);` e al passaggio del mouse `Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}`
 
-#### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
+### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
 wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
 
 ![wavePercent](/README/Circular-Water-Fill-Loading-Animation.gif)
@@ -73,7 +72,7 @@ wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modifi
 
 Dire magari la fonte del file musicale?
 
-## AUTHORS/TEAM
+# AUTHORS/TEAM
 noi e i nostri contatti.
 
 
