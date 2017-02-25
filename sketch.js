@@ -23,7 +23,7 @@ var userName;
 var Result;
 var x = 0;
 var y = 0;
-var myBg, myBg_small, BathroomBack, TubBack, myTub, mySound, myImage, Jack_info;
+var myBg, BathroomBack, TubBack, myTub, mySound, myImage, Jack_info;
 var buttonStart, buttonBathroom, buttonKitchen;     // Change room
 var stateStart=false;
 var stateBath=false;
@@ -101,7 +101,6 @@ var pressDone6 = false;
 
 function preload() {
     myBg = loadImage('images/background.png');
-    myBg_small = loadImage("images/background_small.png");
     Jack_info = loadImage("images/Jack_stand.png");
     BathroomBack = loadImage('images/bathroom.png');
     TubBack = loadImage('images/tub-back.png');
