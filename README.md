@@ -62,8 +62,8 @@ CHANGE ANIMATION (piatti)
 ![GitHub Logo](/README/changeanimation.gif)
 
 GLOW <br>
-The glow è settato col tempo `timeGardenGlow = setInterval(gardenGlow,timeGlow);` e al passaggio del mouse `Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}`
-&nbsp; ![GitHub Logo](/README/glow_mouse.gif) &nbsp; ![GitHub Logo](/README/glow_time.gif)
+The glow è settato col tempo `timeGardenGlow = setInterval(gardenGlow,timeGlow);` e al passaggio del mouse `Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}`<br><br>
+![GitHub Logo](/README/glow_mouse.gif) &nbsp; ![GitHub Logo](/README/glow_time.gif)
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
 wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
