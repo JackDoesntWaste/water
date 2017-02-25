@@ -3,7 +3,7 @@
 # About :fish:
 
 Title is a university project, developed during the course Creative Coding at the Politecnico di Milano.
-The goal was to design an interactive app about an Out of scale topic. 
+The goal was to design an interactive app about an *Out of scale* topic. 
 
 
 ## Project idea
