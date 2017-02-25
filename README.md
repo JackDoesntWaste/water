@@ -1,4 +1,4 @@
-![GitHub Logo](/README/header.jpg)
+![GitHub Logo](/README/header.png)
 
 # About
 
