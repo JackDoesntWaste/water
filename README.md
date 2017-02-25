@@ -8,7 +8,7 @@ The goal was to design an interactive app about an *Out of scale* topic.
 
 ## Project idea
 
-The theme is the waste of water in home environment. The user has the chance to take an experience otherwise impossible through a guided path that allows/helps him to find out how much water he wastes. 
+The theme is the **waste of water** in home environment. The user has the chance to take an experience otherwise impossible through a guided path that allows/helps him to find out how much water he wastes. 
 Jack drives the user in 3 different rooms of the house (bathroom, kitchen and laundry room) where the user has to answer questions about his weekly use of water. The experience ends showing him how much water was used and wasted in 1 week on average.
 The water waste is graphically represented using as unit a tub full of water.  
 
