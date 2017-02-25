@@ -2,11 +2,12 @@
 
 # About :fish:
 
-Il fatto che è un progetto universitario, dei dati etc.
-(progetto universitario e che abbiamo scelto come tema lo spreco dell'acqua)
+Il fatto che è un progetto universitario, dei dati relativi ad un certo tema
 
 ## Project idea
 
+Scelta del tema dell'acqua
+dello spreco domestico
 Rendere l’utente partecipe della scoperta dei dati, in modo interattivo
 (dire come abbiamo voluto "far vivere un'esperienza altrimenti impossibile" ((non mi ricordo le parole esatte delle loro slide)) e quindi l'idea di un "gioco" per far vedere la quantità di acqua usata/sprecata evitando di farla diventare una storiella noiosa. In poche parole la UserExperience?possiamo chiamarla così?)
 
