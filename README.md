@@ -71,7 +71,7 @@ wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modifi
 ![wavepercent](/README/wavepercent.gif)![waves](/README/waves.gif)
 
 
-Dire magari la fonte del file musicale?
+Dire magari la fonte del file musicale? 
 
 # AUTHORS/TEAM
 ... is developed by:
