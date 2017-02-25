@@ -74,6 +74,6 @@ Dire magari la fonte del file musicale?
 
 # AUTHORS/TEAM
 ... is developed by:<br>
-* Mara Cominardi @phoenis 
-* Chiara Riente @chiarariente
-* Sara Pizzatti @sarapizzatti93
+* Mara Cominardi [@phoenis](https://github.com/phoenis) 
+* Chiara Riente [@chiarariente](https://github.com/chiarariente) 
+* Sara Pizzatti [@sarapizzatti93](https://github.com/sarapizzatti93) 
