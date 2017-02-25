@@ -36,6 +36,7 @@ CREAZIONE ANIMAZIONE (JACK cammina)
 ```
 Jack.addAnimation("moving", "images/Jack_walk1.png", "images/Jack_walk2.png");
 ```
+![GitHub Logo](/README/Jack_moving.gif)
 
 VELOCITA' (JACK CAMMINA e si muove)
 ```
