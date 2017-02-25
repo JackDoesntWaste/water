@@ -2,8 +2,8 @@
 
 # About
 
-Title is a university project, developed during the course Creative Coding at the Politecnico di Milano. <br>
-The goal was to design an interactive app about an *Out of scale* topic. 
+Title is a university project built in [p5.js](https://p5js.org/) during the course *Creative Coding* at the Politecnico di Milano. <br>
+The goal was to develop an interactive app about an ***out of scale*** topic. 
 
 # Project idea
 
@@ -22,12 +22,12 @@ l’unione di diversi codici
 bottoni (tipo da disattivare)
 
 ## Resources
-### [p5](https://p5js.org/)
-### [p5.dom](https://p5js.org/reference/#/libraries/p5.dom)
-### [p5.sound](https://p5js.org/reference/#/libraries/p5.sound)
+### [p5.js](https://p5js.org/)
+### [p5.dom.js](https://p5js.org/reference/#/libraries/p5.dom)
+### [p5.sound.js](https://p5js.org/reference/#/libraries/p5.sound)
 We used this library to load and analyze the sound. For example `analyzer.setInput(mySound);` allows us to play and stop the music in certain cases.
 
-### [p5.play](http://p5play.molleindustria.org/)
+### [p5.play.js](http://p5play.molleindustria.org/)
 provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. 
 
 > We used this library to create animations for our project, to move and interact with Jack.
