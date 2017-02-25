@@ -45,7 +45,7 @@ if(mouseX > Jack.position.x + 10 && moving==true) {
     Jack.velocity.x = 5
 }
  ```
-![GitHub Logo](/README/Jack_walk.gif)
+![GitHub Logo](/README/Jack_walking.gif)
 
 CHANGE ANIMATION (piatti)
 ```
