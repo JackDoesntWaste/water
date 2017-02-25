@@ -60,6 +60,8 @@ CHANGE ANIMATION (piatti)
             Dish.changeAnimation("Dishwasher");
         }
 ```
+![GitHub Logo](/README/changeanimation.gif)
+
 GLOW
 The glow è settato col tempo `timeGardenGlow = setInterval(gardenGlow,timeGlow);` e al passaggio del mouse `Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}`
 
