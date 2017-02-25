@@ -63,6 +63,7 @@ CHANGE ANIMATION (piatti)
 
 GLOW <br>
 The glow è settato col tempo `timeGardenGlow = setInterval(gardenGlow,timeGlow);` e al passaggio del mouse `Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}`
+![GitHub Logo](/README/glow_mouse.gif)
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
 wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
