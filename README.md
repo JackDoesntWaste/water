@@ -22,9 +22,14 @@ l’unione di diversi codici
 bottoni (tipo da disattivare)
 
 ### Resources
-![GitHub Logo](/README/p5.play3.png) | p5.play provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. We used this library to create animations for our project, to move and interact with Jack.
------------- | -------------
-![GitHub Logo](/README/Circular-Water-Fill-Loading-Animation.gif) | wavePercent created by Elaine. We used and modified this animation, to fill the screen.
+#### p5
+#### p5.dom
+#### [p5.play](http://p5play.molleindustria.org/)
+provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. We used this library to create animations for our project, to move and interact with Jack.
+
+#### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
+![wavePercent](/README/Circular-Water-Fill-Loading-Animation.gif)
+wavePercent created by Elaine. We used and modified this animation, to fill the screen.
 
 esempi di utilizzo del codice
 
@@ -40,3 +45,9 @@ Dire magari la fonte del file musicale?
 
 ## AUTHORS/TEAM
 noi e i nostri contatti.
+
+
+I think you should use an
+`<addr>` element here instead.
+
+Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
