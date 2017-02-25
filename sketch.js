@@ -16,6 +16,9 @@ interval=setInterval(function(){
     percent++; 
     cnt.innerHTML = percent; 
     water.style.transform='translate(0'+','+(100-percent)+'%)';
+    if(percent==100){
+        clearInterval(interval);
+    }
     },40);
 
 var week = 1;
@@ -23,7 +26,7 @@ var userName;
 var Result;
 var x = 0;
 var y = 0;
-var myBg, BathroomBack, TubBack, myTub, mySound, myImage, Jack_info;
+var myBg, BathroomBack, TubBack, myTub, mySound, myImage;
 var buttonStart, buttonBathroom, buttonKitchen;     // Change room
 var stateStart=false;
 var stateBath=false;
@@ -33,7 +36,7 @@ var moving=false;
 var swimming=false;
 var speedUP=false;
 
-var infoButton, seeCode;
+var infoButton;
 var pressInfo=false;
 var soundButton;
 var restartButton;
@@ -101,7 +104,6 @@ var pressDone6 = false;
 
 function preload() {
     myBg = loadImage('images/background.png');
-    Jack_info = loadImage("images/Jack_stand.png");
     BathroomBack = loadImage('images/bathroom.png');
     TubBack = loadImage('images/tub-back.png');
     KitchenBack = loadImage('images/kitchen.png');
@@ -109,7 +111,7 @@ function preload() {
     iron = loadImage('images/iron.png');
     LaundryBack = loadImage('images/laundry.png');
     myTub=loadImage("images/wastetub.png");
-    mySound = loadSound('sound/cute.mp3');
+    mySound = loadSound("sound/cute.mp3");
 }
 
 //------------------------------------------------•°o.O Setup O.o°•
@@ -125,8 +127,8 @@ function setup() {
 // Start to Bathroom
     buttonStart = createButton("Let's start!");
     buttonStart.id("startButton");
-    buttonStart.size(width/8,height/18);
-    buttonStart.position(width/1.87,height/1.35);
+    buttonStart.size(width/9,height/18);
+    buttonStart.position(width/1.9,height/1.35);
     buttonStart.mousePressed(StartToBath);
 // Bathroom to Kitchen
     buttonBathroom = createButton("");
@@ -147,7 +149,7 @@ function setup() {
 //-----> INPUT NAME
     var inputName = createInput();
     inputName.id("inputName");
-    inputName.position(width/1.92,height/2.08);
+    inputName.position(width/1.92,height/2.04);
     inputName.size(width/3,height/10);
     inputName.value = text;
     // Placeholder
@@ -209,13 +211,6 @@ function setup() {
     soundButton.mousePressed(playSound);
     soundButton.show();
     
-    seeCode=createButton("see code on github");
-    seeCode.id("seeCode");
-    seeCode.position(width/2.1,height/1.32);
-    seeCode.size(width/8.5,width/50);
-    seeCode.mousePressed(github);
-    seeCode.hide();
-    
 /////////////////////////////////////////// LAUNDRY
     // Washing machine
     WMachine = createSprite(width/2,height/2,1,1);
@@ -240,14 +235,14 @@ function setup() {
     selWMachine.hide();
     
     WMachineSlider = createSlider(0,1,0);
-    WMachineSlider.size(width/40,20);
+    WMachineSlider.size(width/40,15);
     WMachineSlider.position(width/1.325,height/5.6);
     WMachineSlider.hide();
     
     input = createInput();
     input.id("numWMachine");
     input.position(width/1.64,height/3.43);
-    input.size(width/40,height/20);
+    input.size(width/40,height/15);
     //placeholder
     input = document.getElementById("numWMachine");
     input.placeholder = 3;
@@ -269,7 +264,7 @@ function setup() {
     input = createInput();
     input.id("numMop");
     input.position(width/8.3,height/5);
-    input.size(width/40,height/20);
+    input.size(width/40,height/15);
     //placeholder
     input = document.getElementById("numMop");
     input.placeholder = 2;
@@ -296,7 +291,7 @@ function setup() {
     
 //-----> INPUT Kitchen
     // > Dish
-    buttonHands = createButton("By hand");
+    buttonHands = createButton("By hands");
     buttonHands.addClass("button");
     buttonHands.id("buttonHands");
     buttonHands.size(width/10,height/18);
@@ -313,7 +308,7 @@ function setup() {
     buttonDishwasher.hide();
     
     handsSlider = createSlider(1,40,10);
-    handsSlider.position(width/1.64,height/2.55);
+    handsSlider.position(width/1.64,height/2.4);
     handsSlider.size(width/8,0);
     handsSlider.hide();
     
@@ -329,7 +324,7 @@ function setup() {
     input = createInput();
     input.id("numDishwasher");
     input.position(width/1.64,height/2.18);
-    input.size(width/40,height/20);
+    input.size(width/40,height/15);
     //placeholder
     input = document.getElementById("numDishwasher");
     input.placeholder = 7;
@@ -360,7 +355,7 @@ function setup() {
     input = createInput();
     input.id("mqGarden");
     input.position(width/4.75,height/3.8);
-    input.size(width/20,height/20);
+    input.size(width/15,height/15);
     //placeholder
     input = document.getElementById("mqGarden");
     input.placeholder = 100;
@@ -446,14 +441,14 @@ function setup() {
     
     showerSlider = createSlider(1,60,10);
     showerSlider.addClass("slider");
-    showerSlider.size(width/8,20);
+    showerSlider.size(width/8,15);
     showerSlider.position(width/1.64,height/2.8);
     showerSlider.hide();
     
     input = createInput();
     input.id("numShower");
     input.position(width/1.64,height/2.08);
-    input.size(width/40,height/20);
+    input.size(width/40,height/15);
     //placeholder
     input = document.getElementById("numShower");
     input.placeholder = 5;
@@ -470,7 +465,7 @@ function setup() {
     input = createInput();
     input.id("numBaths");
     input.position(width/1.64,height/2.08);
-    input.size(width/40,height/20);
+    input.size(width/40,height/15);
     //placeholder
     input = document.getElementById("numBaths");
     input.placeholder = 4;
@@ -486,13 +481,13 @@ function setup() {
     // > Teeth
     
     teethSlider = createSlider(1,10,1);
-    teethSlider.position(width/8.3,height/4);
+    teethSlider.position(width/8.3,height/3.5);
     teethSlider.size(width/8,0);
     teethSlider.hide();
     
     buttonDone2 = createButton("Done!");
     buttonDone2.addClass("button");
-    buttonDone2.position(width/5.15,height/3);
+    buttonDone2.position(width/5.15,height/2.9);
     buttonDone2.size(width/15,height/18);
     buttonDone2.mousePressed(Q2results);
     buttonDone2.hide();
@@ -513,22 +508,19 @@ function draw(){
         Expand.position.y=height*0.3;
         Expand.scale=width/1000;
 
-    if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if (width/height <= 1.33) {
         push();
-        textSize(width/18);
+        textSize(width/15);
         textAlign(CENTER);
-        textStyle(NORMAL);
-        textFont("Lato");
+        textStyle(BOLD);
+        textFont("Dosis");
         fill(255);
-        text("We are sorry,\nbut this website is not yet\navailable on the mobile.",width/2,height/2);
+        text("PLEASE,\nEXTEND AND REFRESH\nYOUR BROWSER!",width/2,height/2);
         fill(0, 102, 153);
         pop();
         
         buttonStart.hide();
         document.getElementById("inputName").style.visibility='hidden';
-        mySound.stop();
-        infoButton.hide();
-        soundButton.hide();
         
         Jack.visible=false;
         Bath.visible=false;
@@ -551,7 +543,7 @@ function draw(){
     document.getElementById("inputName").style.visibility='visible';
     
     if (percent<100){
-        image(myBg,x,y,width*3,height*2); 
+        image(myBg,x,y,width*3,height*2);       
         
         push();
         imageMode(CENTER);   
@@ -580,7 +572,7 @@ function draw(){
         document.getElementById("water").style.visibility='visible';
     }
         
-    if (percent>=100){
+    if (percent==100){
         document.getElementById("water").style.visibility='hidden';
         WMachine.visible=false;
         Mop.visible=false;
@@ -611,7 +603,7 @@ function draw(){
         wavewB=wavewB+a*2;
         wavehB=wavehB+1;
         
-        if (wavewB>=a*200) {
+        if (wavewB>=a*150) {
             wavewB=0;
             wavehB=0;
         }
@@ -650,7 +642,7 @@ function draw(){
 // TEXT - Question
     push();
     fill(255);
-    textSize(width/20);
+    textSize(width/15);
     textAlign(CENTER);
     textStyle(BOLD);
     textFont("Dosis");
@@ -663,12 +655,12 @@ function draw(){
         textSize((width/100)*3.5);
         textAlign(LEFT);
         textFont("Lato");
-        text("Hi,",width/2.13,height/1.81);
+        text("Hi,",width/2.13,height/1.78);
     }
     pop();
     push();
     if (stateStart==false){
-        fill(color('rgba(255, 255, 255, 0.7)'));
+        fill(255);
         textSize((width/100)*2.5);
         textAlign(LEFT);
         textFont("Lato");
@@ -733,7 +725,7 @@ function draw(){
         push();
         noStroke();
         fill(color('rgba(255, 255, 255, 0.9)'));
-        rect(width/1.7, height/10, width/3.6, height/1.69, 20);
+        rect(width/1.7, height/10, width/3.8, height/1.69, 15);
         pop();
         
         text("Do you prefer to take a shower\nor a bath?", width/1.64,height/6.2);
@@ -846,10 +838,10 @@ function draw(){
         push();
         noStroke();
         fill(color('rgba(255, 255, 255, 0.9)'));
-        rect(width/10, height/10, width/3.6, height/2.8, 20);
+        rect(width/10, height/10, width/3.8, height/2.8, 15);
         pop();
         
-        text("How long do you leave the tap running\nwhile you are brushing your teeth?", width/8.3,height/6.2);
+        text("How long do you leave the tap\nrunning while you are brushing\nyour teeth?", width/8.3,height/6.2);
         teethSlider.show();
         buttonDone2.show();
         
@@ -859,14 +851,15 @@ function draw(){
         textSize(height/100*2.2);
         teethMinutes = teethSlider.value();
         if(teethMinutes===1){
-            text(teethMinutes+ " minute", width/3.9,height/3.9);
+            text(teethMinutes+ " minute", width/3.9,height/3.4);
         } else {
-            text(teethMinutes+ " minutes", width/3.9,height/3.9); }
+            text(teethMinutes+ " minutes", width/3.9,height/3.4); }
         pop();
         }
   
     if(pressDone2===true){
         Sink.onMousePressed = function() {}
+        
         teethWeek = 14;
         
         myTeeth = week * teethWeek * teethMinutes * bathroomData[0];
@@ -879,7 +872,7 @@ function draw(){
     }
         
     if(pressDone2===true){
-        Sink.onMouseOver = function() {this.changeAnimation("Sink_before");}    //*
+        Sink.onMouseOver = function() {this.changeAnimation("Sink_before");}
         Sink.changeAnimation("Sink_before");
         moving=true;
         buttonBathroom.show();
@@ -923,7 +916,7 @@ function draw(){
         push();
         noStroke();
         fill(color('rgba(255, 255, 255, 0.9)'));
-        rect(width/1.7, height/10, width/3.6, height/1.8, 20);
+        rect(width/1.7, height/10, width/3.8, height/1.8, 15);
         pop();
             
         text("How do you wash your dishes?", width/1.64,height/6.2);
@@ -934,7 +927,7 @@ function draw(){
             document.getElementById("buttonHands").className = "selected"; 
             document.getElementById("buttonDishwasher").className = "button";
  
-            text("How long do you leave the tap running\nwhile you are doing your dishes?", width/1.64,height/3.3);
+            text("How long do you leave the tap\nrunning while you are doing\nyour dishes?", width/1.64,height/3.3);
         
             handsSlider.show();
             handsMinutes = handsSlider.value();
@@ -942,14 +935,14 @@ function draw(){
             push();
             textSize(height/100*2.2);
             if(handsMinutes===1){
-                text(handsMinutes+" minute",width/1.34,height/2.5);
+                text(handsMinutes+" minute",width/1.34,height/2.35);
             } else {
-                text(handsMinutes+" minutes",width/1.34,height/2.5);
+                text(handsMinutes+" minutes",width/1.34,height/2.35);
             }
             pop();
         
             buttonDone3.show();
-            buttonDone3.position(width/1.46,height/2.1);
+            buttonDone3.position(width/1.46,height/2.05);
         }
     
         if(pressDishwasher===true){
@@ -1039,7 +1032,7 @@ function draw(){
         push();
         noStroke();
         fill(color('rgba(255, 255, 255, 0.9)'));
-        rect(width/10, height/10, width/3.6, height/1.8, 20);
+        rect(width/10, height/10, width/3.8, height/1.8, 15);
         pop();
 
         text("Do you have a garden?", width/8.3,height/6.2);
@@ -1119,15 +1112,15 @@ function draw(){
     }
         
     if (pressDone4==true || pressNo==true){
-        Garden.onMouseOver = function() {this.changeAnimation("Garden_closed");}    //*
+        Garden.onMouseOver = function() {this.changeAnimation("Garden_closed");}
         moving=true;
         buttonKitchen.show();
     }
-                  
-    if (x==-width*2 && Jack.position.x!=width/5*2 && pressDone5==false){
-        WMachine.onMouseOver = function() {this.changeAnimation("WMGlow");}     //*
-    }
         
+    if (x==-width*2 && Jack.position.x!=width/5*2 && pressDone5==false){
+        WMachine.onMouseOver = function() {this.changeAnimation("WMGlow");}
+    }
+                
     if(pressDone5==false && Jack.position.x>=width/8*7){
         stateBath=false;
         stateKitchen=true;
@@ -1174,7 +1167,7 @@ function draw(){
         push();
         noStroke();
         fill(color('rgba(255, 255, 255, 0.9)'));
-        rect(width/1.7, height/10, width/3.6, height/2.6, 20);
+        rect(width/1.7, height/10, width/3.8, height/2.6, 15);
         pop();
     
         text("Set the washine machine program...",width/1.64,height/6.2);
@@ -1228,9 +1221,9 @@ function draw(){
     }
     
         if(pressDone5===true){
+            moving=true;
             WMachine.onMouseOver = function() {this.changeAnimation("WMClosed");}
             WMachine.changeAnimation("WMClosed");
-            moving=true;
         }
             
     if (x==-width*2 && Jack.position.x>=width/5*2 && pressDone5===false){
@@ -1256,7 +1249,7 @@ function draw(){
         push();
         noStroke();
         fill(color('rgba(255, 255, 255, 0.9)'));
-        rect(width/10, height/10, width/3.6, height/2.6, 20);
+        rect(width/10, height/10, width/3.9, height/2.6, 15);
         pop();
     
         text("How many times a week do you\nclean your house?",width/8.3,height/6.2);
@@ -1284,8 +1277,8 @@ function draw(){
   }
   
   if(pressDone6===true){
-        Mop.onMouseOver = function() {this.changeAnimation("MopNotInUse");}     //*
-      
+        Mop.onMouseOver = function() {this.changeAnimation("MopNotInUse");}
+        
         moving=true;
         
         mopWeek = document.getElementById("numWMachine").value;
@@ -1312,9 +1305,9 @@ function draw(){
 
         Mop.changeAnimation("MopNotInUse");        
     }
-        
-        var WaterWaste =Math.round(Result - 700,1);
-        var Waste = Math.round(WaterWaste/100);
+    
+    var WaterWaste =Math.round(Result - 700,1);
+    var Waste = Math.round(WaterWaste/100);
         
 //// RESULTS - WAVES
     if (percent > 90 && percent < 100){                 
@@ -1337,7 +1330,7 @@ function draw(){
         Jack.scale = width/1600;    // RIMPICCIOLIRE JACK
         Jack.position.x=width/6;
         }else{
-        Jack.scale = width/2000;    // RIMPICCIOLIRE JACK
+        Jack.scale = width/1500;    // RIMPICCIOLIRE JACK
         Jack.position.x=width/2;    
         }
     }
@@ -1347,16 +1340,17 @@ function draw(){
         myImage.visible=true;
         restartButton.show();
         shareButton.show();
+        
         wasteTubs(Waste);
-        image(myTub,8*width/24,42.3*height/48,width/30,width/30);    
+        image(myTub,8*width/24,42.2*height/48,50,50);   
         fill(255);
         textFont("Lato");
         textAlign(LEFT);
         textSize(height/40);
         textStyle(NORMAL);   
-        text("= 100 liters", 9*width/24,45*height/48); 
+        text("= 100 liters", 9*width/24,45*height/48);
             
-      if(userName=="" || userName==null || userName==undefined){
+        if(userName=="" || userName==null || userName==undefined){
    
         fill(255);
         textFont("Dosis");
@@ -1390,11 +1384,11 @@ function draw(){
         textSize(height/100*3.2);     
         text("According to the World Health Organization you would need only 700 liters. \nWith the water you wasted, you could fill  "+Waste+" bathtubs.", 8*width/24,11*height/48);
         }    
-  } else if (percent>=95 && Jack.position.y==5*height/8 && Waste<1){
-      
+     } else if (percent>=95 && Jack.position.y==5*height/8 && Waste<1){
         restartButton.show();
         shareButton.show();
-      if(userName=="" || userName==null || userName==undefined){
+        
+        if(userName=="" || userName==null || userName==undefined){
         
         fill(255);
         textFont("Dosis");
@@ -1405,28 +1399,27 @@ function draw(){
         
         textStyle(NORMAL);
         textFont("Lato");
-        textSize(height/100*3.2); 
+        textSize(height/100*3.2);
         text("Compliments! You have respected the amount of water setted by the World Health Organization, \nwhich says that 100 liters per person per day are needed to ensure that most basic human needs.", width/2,2*height/9);  
           
-        } else {    
-            
+        } else {
         fill(255);    
         textFont("Dosis");
         textAlign(CENTER);
-        textSize(height/15);
+        textSize(width/28);
         textStyle(BOLD);   
         text(userNamemaiuscola+", YOU USED "+Result+" LITERS OF WATER IN A WEEK!", width/2,height/6);
         
         textStyle(NORMAL);
         textFont("Lato");
-        textSize(height/100*3.2); 
+        textSize(height/100*3.2);
         text("Compliments! You have respected the amount of water setted by the World Health Organization, \nwhich says that 100 liters per person per day are needed to ensure that most basic human needs.", width/2,2*height/9);  
         }
-        } else if(Jack.position.y==height/2.2 && Waste<1){
+    } else if(Jack.position.y==height/2.2 && Waste<1){
         myImage.visible=false;
-        } else if(Jack.position.y!=height/2.2){
+    } else if(Jack.position.y!=height/2.2){
         myImage.visible=false;
-        }
+    }
 /////////////////////////////////////////// JACK Animation <3        
         // moving left
         if(mouseX < Jack.position.x - 10 && moving==true) {
@@ -1450,18 +1443,18 @@ function draw(){
         // JACK fall down
         else if(y<0 && y>-height) {
             Jack.changeAnimation("falling");
-            Jack.velocity.x = 0;
+            Jack.velocity.x = 0; 
+            speedUp=false;
         } 
         // don't move > shower
         else if (y<=-height && Jack.position.y==height*0.64 && pressDone1==false) {
             Jack.changeAnimation("shower");
-            Jack.velocity.x = 0; 
-            speedUp=false;
+            Jack.velocity.x = 0;   
         } 
         // don't move > toothbrush
         else if (Jack.position.x==width/10*6.5 && pressDone2==false && x==0) {
-            Sink.onMouseOver = function() {this.changeAnimation("Sink_before");}    //*
-            Sink.changeAnimation("Sink_before");    //*
+            Sink.onMouseOver = function() {this.changeAnimation("Sink_before");}
+            Sink.changeAnimation("Sink_before");
             Jack.changeAnimation("toothbrush");
             clearInterval(timeSinkGlow);  //<< TIME
             speedUP=false;
@@ -1475,7 +1468,7 @@ function draw(){
         }     
         // don't move > garden
         else if (Jack.position.x==width/5*4 && x==-width && pressDone4===false) {
-            Garden.onMouseOver = function() {this.changeAnimation("Garden_open");}    //*
+            Garden.onMouseOver = function() {this.changeAnimation("Garden_open");}
             Jack.changeAnimation("garden");
             clearInterval(timeGardenGlow);  //<< TIME
             speedUP=false;
@@ -1483,7 +1476,7 @@ function draw(){
         }     
         // don't move > washing machine
         else if (Jack.position.x==width/5*2 && x==-width*2 && pressDone5===false) {
-            WMachine.onMouseOver = function() {this.changeAnimation("WMOpened");}    //*
+            WMachine.onMouseOver = function() {this.changeAnimation("WMOpened");}
             Jack.changeAnimation("clothes");
             clearInterval(timeWMGlow);  //<< TIME
             speedUP=false;
@@ -1491,7 +1484,7 @@ function draw(){
         }     
         // don't move > mop
         else if (Jack.position.x==width/5*4 && x==-width*2 && pressDone6===false) {
-            Mop.onMouseOver = function() {this.changeAnimation("MopInUse");}    //*
+            Mop.onMouseOver = function() {this.changeAnimation("MopInUse");}
             Jack.changeAnimation("mop");
             clearInterval(timeMopGlow);  //<< TIME
             speedUP=false;
@@ -1560,44 +1553,9 @@ function draw(){
         push();
         noStroke();
         fill(255);
-        rect(200, 75, width-400, height-150, 30);
+        rect(100, 75, width-150, height-150, 30);
         pop();
         
-        image(Jack_info,width/4.3,height/4.2,width/6.5,width/3.5);
-        
-        push();
-        textSize(height/100*2.5);
-        fill("#58595b");
-        textFont("Lato");
-        textStyle(BOLD);
-        text("WHAT?",width/2.1,height/3.8);
-        pop();
-        
-        push();
-        textSize(height/100*2.5);
-        fill("#58595b");
-        textFont("Lato");
-        text("This is a university project built in p5.js during the\ncourse Creative Coding at the Politecnico di Milano.\n\nJack will drive you in 3 different rooms where you\nhave to answer questions about your habits.\nAt the end you'll find out how much water you waste\nin average in a week.", width/2.1,height/3.3);
-        pop();
-        
-        push();
-        textSize(height/100*2.5);
-        fill("#58595b");
-        textFont("Lato");
-        textStyle(BOLD);
-        text("WHO?",width/2.1,height/1.78);
-        pop();
-        
-        push();
-        textSize(height/100*2.5);
-        fill("#58595b");
-        textFont("Lato");
-        text("The project is developed by:\n•  Mara Cominardi\n•  Chiara Riente\n•  Sara Pizzatti", width/2.1,height/1.65);
-        pop();
-        
-        seeCode.show();
-        
-        Jack.visible=false;
         buttonStart.hide();
         buttonShower.hide();
         buttonTub.hide();
@@ -1621,18 +1579,12 @@ function draw(){
         selWMachine.hide();
         WMachineSlider.hide();
         mopSlider.hide();
-        buttonBathroom.hide();
-        buttonKitchen.hide();
-        document.getElementById("inputName").style.visibility = "hidden";
         document.getElementById("numBaths").style.visibility = "hidden";
         document.getElementById("numShower").style.visibility = "hidden";
         document.getElementById("numDishwasher").style.visibility = "hidden";
         document.getElementById("mqGarden").style.visibility = "hidden";
         document.getElementById("numWMachine").style.visibility = "hidden";
         document.getElementById("numMop").style.visibility = "hidden";
-    } else {
-        Jack.visible = true;
-        seeCode.hide();
     }
     
 // draw() ends here
@@ -1695,7 +1647,7 @@ function Q1results(){
         buttonDone1.hide();
         
         timeSinkGlow = setInterval(sinkGlow,timeGlow); ///<<TIME
-        timeSinkOverGlow = setInterval(sinkOverGlow,250); ///<<TIME OVER        
+        timeSinkOverGlow = setInterval(sinkOverGlow,250); ///<<TIME OVER    
     }
 }
 
@@ -1772,8 +1724,7 @@ function noOptions() {
         buttonNo.hide();
         buttonDone4.hide();
     }
-    
-        timeWMGlow = setInterval(wmGlow,timeGlow*2.5); ///<<TIME
+    timeWMGlow = setInterval(wmGlow,timeGlow*2.5); ///<<TIME
 }
 
 function Q4results() {
@@ -1786,8 +1737,7 @@ function Q4results() {
         gardenSlider.hide();
         buttonDone4.hide();
     }
-    
-        timeWMGlow = setInterval(wmGlow,timeGlow*2.5); ///<<TIME
+    timeWMGlow = setInterval(wmGlow,timeGlow*2.5); ///<<TIME
 }
 
 //------------------------------------------------•°o.O Laundry O.o°•
@@ -1815,9 +1765,6 @@ function Q6results() {
 }
 
 // button RESTART - SHARE - SOUND - INFO
-function github() {
-     window.open("https://github.com/JackDoesntWaste/water","_blank");
-}
 
 function restart() {
     location.reload();
@@ -1844,7 +1791,7 @@ function shareFb() {
 }
 
 function shareTw() {
-    window.open("https://twitter.com/share?url=https://phoenis.github.io/Waste-water-1/&amp;text=How%20much%20water%20do%20you%20use?%20Let's%20find%20it%20out%20with%20Jack%20on&amp;hashtags=JackDoesntWaste",'_blank');
+    window.open("https://twitter.com/share?url=https://phoenis.github.io/Waste-water-1/&amp;text=How%15much%15water%15do%15you%15use?%15Let's%15find%15it%15out%15with%15Jack%15on&amp;hashtags=JackDoesntWaste",'_blank');
 }
 
 function sharePin() {
@@ -1855,7 +1802,6 @@ function infoBox() {
     if(pressInfo===false){
         pressInfo=true;
         document.getElementById("info").className = "infoSelected";
-        buttonStart.hide();
     } else {
         pressInfo=false;
         document.getElementById("info").className = "info"; 
@@ -1883,7 +1829,7 @@ function wasteTubs(z){
     myImage.position.y=9*height/16;
     drawSprites(); 
     
-}else if(z==2){
+} else if(z==2){
     for(var a=11*width/24; a<width; a+=(1/3)*width){
 
     myImage.scale=width/4000; 
@@ -1892,7 +1838,7 @@ function wasteTubs(z){
     drawSprites(); 
     }
     
-}else if(z==3){
+} else if(z==3){
     for(var a=10*width/24; a<width; a+=(5/24)*width){
 
     myImage.scale=width/6000; 
@@ -1901,16 +1847,16 @@ function wasteTubs(z){
     drawSprites();   
     }
     
-}else if(z>=4 && z<9){
-
+} else if(z>=4 && z<9){
     u=z%4;    
     j=Math.floor(z/4);  
+    
     for(var a=19*width/48; a<=22*width/24; a+=(7*width/48)){
         for(var b=21*height/48;b<=((21*j)*height/48); b+=13*height/48){
     myImage.scale=width/7500; 
     myImage.position.x=a;
     myImage.position.y=b;
-    drawSprites(); 
+    drawSprites();   
     }
     }
     
@@ -1921,13 +1867,13 @@ function wasteTubs(z){
     drawSprites();
     }
     
-}else if(z>=9 && z<=21){
+} else if(z>=9 && z<=21){
     j=Math.floor(z/7);
     u=z%7;    
          
     for(var a=(9*(width/24)); a<22*width/24; a+=(width/12)){
         for(var b=10*height/24;b<(10/24+j/6)*height; b+=height/6){
-    myImage.scale=width/12000; 
+    myImage.scale=width/11500; 
     myImage.position.x=a;
     myImage.position.y=b;
     drawSprites();   
@@ -1935,14 +1881,13 @@ function wasteTubs(z){
     }
     
     for(var c=(9*(width/24)); c<(4+u)*(width/12); c+=(width/12)){
-    myImage.scale=width/12000; 
+    myImage.scale=width/11500; 
     myImage.position.x=c;
     myImage.position.y=(10/24+(j/6))*height;
     drawSprites();
     }
     
-}else if(z>21){
-    
+} else if(z>21){
     myImage.scale=width/4000; 
     myImage.position.x=12*width/24;
     myImage.position.y=9*height/16;
@@ -1954,7 +1899,7 @@ function wasteTubs(z){
         textSize(height/4);
         textStyle(BOLD);     
         text("⨯"+z, 16*width/24,11*height/16);       
-}else if(z==0){
+} else if(z==0){
     myImage.visible=false;
 }   
     
