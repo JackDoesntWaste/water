@@ -28,21 +28,44 @@ bottoni (tipo da disattivare)
 We used this library to load and analyze the sound. For example `analyzer.setInput(mySound);` allows us to play and stop the music in certain cases.
 
 #### [p5.play](http://p5play.molleindustria.org/)
-provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. We used this library to create animations for our project, to move and interact with Jack.
+provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. 
+
+> We used this library to create animations for our project, to move and interact with Jack.
+
+CREAZIONE ANIMAZIONE (JACK cammina)
+```
+Jack.addAnimation("moving", "images/Jack_walk1.png", "images/Jack_walk2.png");
+```
+
+VELOCITA' (JACK CAMMINA e si muove)
+```
+if(mouseX > Jack.position.x + 10 && moving==true) {
+    Jack.changeAnimation("moving");
+    Jack.mirrorX(1);
+    Jack.velocity.x = 5
+}
+ ```
+![GitHub Logo](/README/Jack_walk.gif)
+
+CHANGE ANIMATION (piatti)
+```
+    if (pressDone3==true) {
+            Dish.changeAnimation("Dish_none");
+            moving=true;  //<<AGGIUNGI
+        } else if (pressHands==true){
+            Dish.changeAnimation("Sink");
+        } else if (pressDishwasher==true){
+            Dish.changeAnimation("Dishwasher");
+        }
+```
+GLOW
+The glow è settato col tempo `timeGardenGlow = setInterval(gardenGlow,timeGlow);` e al passaggio del mouse `Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}`
 
 #### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
+wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
+
 ![wavePercent](/README/Circular-Water-Fill-Loading-Animation.gif)
-wavePercent created by Elaine. We used and modified this animation, to fill the screen.
 
-esempi di utilizzo del codice
-
-```
-pezzi di codice
-```
-![GitHub Logo](/README/Jack_walk.gif)
-```
-- es creazione animazioni, change animation…
-```
 
 Dire magari la fonte del file musicale?
 
@@ -54,3 +77,8 @@ I think you should use an
 `<addr>` element here instead.
 
 Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
+
+As Kanye West said:
+
+> We're living the future so
+> the present is our past.
