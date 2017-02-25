@@ -1,4 +1,4 @@
-![GitHub Logo](/images/card.jpg)
+![GitHub Logo](/images/card.png)
 
 # About :fish:
 
