@@ -1348,7 +1348,7 @@ function draw(){
         restartButton.show();
         shareButton.show();
         wasteTubs(Waste);
-        image(myTub,width/3,height/1.123,width/30,width/30);    
+        image(myTub,width/3,height/1.111,width/30,width/30);    
         fill(255);
         textFont("Lato");
         textAlign(LEFT);
@@ -1383,7 +1383,7 @@ function draw(){
         textAlign(LEFT);
         textSize(width/28);
         textStyle(BOLD);     
-        text("YOU USED "+Result+" LITERS OF WATER IN A WEEK!", width/3,height/5.7); 
+        text("YOU USED "+Result+" LITERS IN A WEEK!", width/3,height/5.7); 
             
         textStyle(NORMAL);
         textFont("Lato");
@@ -1402,7 +1402,7 @@ function draw(){
         textAlign(CENTER);
         textSize(width/28);
         textStyle(BOLD);   
-        text("YOU USED "+Result+" LITERS OF WATER IN A WEEK!", width/2,height/5.7);
+        text("YOU USED "+Result+" LITERS IN A WEEK!", width/2,height/5.7);
         
         textStyle(NORMAL);
         textFont("Lato");
@@ -1416,7 +1416,7 @@ function draw(){
         textAlign(CENTER);
         textSize(height/15);
         textStyle(BOLD);   
-        text(userNamemaiuscola+", YOU USED "+Result+" LITERS OF WATER IN A WEEK!", width/2,height/5.7);
+        text(userNamemaiuscola+", YOU USED "+Result+" LITERS IN A WEEK!", width/2,height/5.7);
         
         textStyle(NORMAL);
         textFont("Lato");
