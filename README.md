@@ -15,11 +15,11 @@ The water waste is graphically represented using as unit a tub full of water.
 
 (e qui dire tutto sul codice, le librerie utilizzate in js, l'aggiunta di CSS e qualcosa in html (le onde) ecc ecc. ((magari aggiungere dei pezzi di codice e img come Jack che hai già inserito)) Dire anche come abbiamo calcolato effettivamente la quantità d'acqua.
 
-## Difficulties
-L’inserimento di codici esterni.
-L’uso delle condizioni (?!)
-l’unione di diversi codici
-bottoni (tipo da disattivare)
+## Data
+asjdoha
+
+## Challenges
+Bottoni (responsive, changeClasse) -> css, js
 
 ## Resources
 ### [p5.js](https://p5js.org/)
@@ -30,15 +30,15 @@ We used this library to load and analyze the sound. For example `analyzer.setInp
 ### [p5.play.js](http://p5play.molleindustria.org/)
 provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. 
 
-> We used this library to create animations for our project, to move and interact with Jack.
+We used this library to create animations for our project, to move and interact with Jack.
 
-CREAZIONE ANIMAZIONE (JACK cammina)
+#### Create animation
 ```
 Jack.addAnimation("moving", "images/Jack_walk1.png", "images/Jack_walk2.png");
 ```
 ![Jack_moving](/README/Jack_moving.gif)
 
-VELOCITA' (JACK CAMMINA e si muove)
+#### Set velocity to animation
 ```
 if(mouseX > Jack.position.x + 10 && moving==true) {
     Jack.changeAnimation("moving");
@@ -48,7 +48,7 @@ if(mouseX > Jack.position.x + 10 && moving==true) {
  ```
 ![Jack_walking](/README/Jack_walking.gif)
 
-CHANGE ANIMATION (piatti)
+#### Change animation
 ```
     if (pressDone3==true) {
             Dish.changeAnimation("Dish_none");
@@ -61,12 +61,12 @@ CHANGE ANIMATION (piatti)
 ```
 ![GitHub Logo](/README/changeanimation.gif)
 
-GLOW <br>
-The glow è settato col tempo `timeGardenGlow = setInterval(gardenGlow,timeGlow);` e al passaggio del mouse `Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}`<br><br>
+#### SetInterval and onMouseOver<br>
+The glow è settato col tempo `timeSinkGlow = setInterval(sinkGlow,timeGlow)` e al passaggio del mouse `Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}`<br><br>
 ![glow_mouse](/README/glow_mouse.gif)![glow_time](/README/glow_time.gif)
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
-wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
+created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
 
 ![wavepercent](/README/wavepercent.gif)![waves](/README/waves.gif)
 
@@ -74,7 +74,7 @@ wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modifi
 Dire magari la fonte del file musicale? 
 
 # AUTHORS/TEAM
-... is developed by:
+...is developed by:
 * Mara Cominardi [@phoenis](https://github.com/phoenis) 
 * Chiara Riente [@chiarariente](https://github.com/chiarariente) 
 * Sara Pizzatti [@sarapizzatti93](https://github.com/sarapizzatti93) 
