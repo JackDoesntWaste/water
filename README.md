@@ -20,7 +20,7 @@ L’uso delle condizioni (?!)
 l’unione di diversi codici
 bottoni (tipo da disattivare)
 
-### Re used code
+### Resourches
 ![GitHub Logo](/README/p5.play3.png) | p5.play provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. We used this library to create animations for our project, to move and interact with Jack.
 ------------ | -------------
 ![GitHub Logo](/README/Circular-Water-Fill-Loading-Animation.gif) | wavePercent created by Elaine. We used and modified this animation, to fill the screen.
