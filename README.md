@@ -74,7 +74,7 @@ wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modifi
 Dire magari la fonte del file musicale?
 
 # AUTHORS/TEAM
-... is developed by:<br>
+... is developed by:
 * Mara Cominardi [@phoenis](https://github.com/phoenis) 
 * Chiara Riente [@chiarariente](https://github.com/chiarariente) 
 * Sara Pizzatti [@sarapizzatti93](https://github.com/sarapizzatti93) 
