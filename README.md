@@ -73,15 +73,7 @@ wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modifi
 Dire magari la fonte del file musicale?
 
 # AUTHORS/TEAM
-noi e i nostri contatti.
-
-
-I think you should use an
-`<addr>` element here instead.
-
-Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
-
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
+... is developed by:<br>
+* Mara Cominardi @phoenis 
+* Chiara Riente @chiarariente
+* Sara Pizzatti @sarapizzatti93
