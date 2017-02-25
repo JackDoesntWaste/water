@@ -161,34 +161,34 @@ function setup() {
 ////    Button RESTART - SHARE - INFO - SOUND
     restartButton=createButton("Restart");
     restartButton.addClass("button");
-    restartButton.position(width/18.8,43*height/48);
+    restartButton.position(width/18.8,height/1.12);
     restartButton.mousePressed(restart);
     restartButton.hide();
     
     shareButton=createButton("Share");
     shareButton.id("share");
     shareButton.addClass("button");
-    shareButton.position(width/8,43*height/48);
+    shareButton.position(width/8,height/1.12);
     shareButton.mousePressed(shareOptions);
     shareButton.hide();
 
     fbButton=createButton("");
     fbButton.id("facebook");
-    fbButton.position(width/5.5,43.3*height/48);
+    fbButton.position(width/5.5,height/1.11);
     fbButton.size(width/30,width/30);
     fbButton.mousePressed(shareFb);
     fbButton.hide();
  
     twButton=createButton("");
     twButton.id("twitter");
-    twButton.position(width/4.9,43.3*height/48);
+    twButton.position(width/4.9,height/1.11);
     twButton.size(width/30,width/30);
     twButton.mousePressed(shareTw);
     twButton.hide();
     
     pinButton=createButton("");
     pinButton.id("pinterest");
-    pinButton.position(width/4.4,43.3*height/48);
+    pinButton.position(width/4.4,height/1.11);
     pinButton.size(width/30,width/30);
     pinButton.mousePressed(sharePin);
     pinButton.hide();
@@ -196,7 +196,7 @@ function setup() {
     infoButton=createButton("");
     infoButton.id("info");
     infoButton.addClass("info");
-    infoButton.position(width/38,height/30);
+    infoButton.position(width/18.8,height/30);
     infoButton.size(width/30,width/30);
     infoButton.mousePressed(infoBox);
     infoButton.show();
@@ -204,7 +204,7 @@ function setup() {
     soundButton=createButton("");
     soundButton.id("sound");
     soundButton.addClass("sound");
-    soundButton.position(width/18.8,height/30);
+    soundButton.position(width/38,height/30);
     soundButton.size(width/30,width/30);
     soundButton.mousePressed(playSound);
     soundButton.show();
@@ -1348,13 +1348,13 @@ function draw(){
         restartButton.show();
         shareButton.show();
         wasteTubs(Waste);
-        image(myTub,8*width/24,42.3*height/48,width/30,width/30);    
+        image(myTub,width/3,height/1.123,width/30,width/30);    
         fill(255);
         textFont("Lato");
         textAlign(LEFT);
         textSize(height/40);
         textStyle(NORMAL);   
-        text("= 100 liters", 9*width/24,45*height/48); 
+        text("= 100 liters", width/2.7,height/1.05); 
             
       if(userName=="" || userName==null || userName==undefined){
    
@@ -1363,12 +1363,12 @@ function draw(){
         textAlign(LEFT);
         textSize(width/28);
         textStyle(BOLD);   
-        text("YOU USED "+Result+" LITERS OF WATER IN A WEEK!", 8*width/24,3*height/24);
+        text("YOU USED "+Result+" LITERS IN A WEEK!", width/3,height/5.7);
         
         textStyle(NORMAL);
         textFont("Lato");
         textSize(height/100*3.2);
-        text("According to the World Health Organization you would need only 700 liters.\nWith the water you wasted, you could fill "+Waste+" bathtubs.", 8*width/24,9*height/48);
+        text("According to the World Health Organization you would need only 700 liters.\nWith the water you wasted, you could fill "+Waste+" bathtubs.", width/3,height/4.5);
           
         } else { 
         fill(255);
@@ -1376,24 +1376,25 @@ function draw(){
         textAlign(LEFT);
         textSize(width/28);
         textStyle(BOLD);     
-        text(userNamemaiuscola+",", 8*width/24,3*height/24);    
+        text(userNamemaiuscola+",", width/3,height/9);    
             
         fill(255);
         textFont("Dosis");
         textAlign(LEFT);
         textSize(width/28);
         textStyle(BOLD);     
-        text("YOU USED "+Result+" LITERS OF WATER IN A WEEK!", 8*width/24,9*height/48); 
+        text("YOU USED "+Result+" LITERS OF WATER IN A WEEK!", width/3,height/5.7); 
             
         textStyle(NORMAL);
         textFont("Lato");
         textSize(height/100*3.2);     
-        text("According to the World Health Organization you would need only 700 liters. \nWith the water you wasted, you could fill  "+Waste+" bathtubs.", 8*width/24,11*height/48);
+        text("According to the World Health Organization you would need only 700 liters. \nWith the water you wasted, you could fill  "+Waste+" bathtubs.", width/3,height/4.5);
         }    
   } else if (percent>=95 && Jack.position.y==5*height/8 && Waste<1){
       
         restartButton.show();
         shareButton.show();
+    
       if(userName=="" || userName==null || userName==undefined){
         
         fill(255);
@@ -1401,12 +1402,12 @@ function draw(){
         textAlign(CENTER);
         textSize(width/28);
         textStyle(BOLD);   
-        text("YOU USED "+Result+" LITERS OF WATER IN A WEEK!", width/2,height/6);
+        text("YOU USED "+Result+" LITERS OF WATER IN A WEEK!", width/2,height/5.7);
         
         textStyle(NORMAL);
         textFont("Lato");
         textSize(height/100*3.2); 
-        text("Compliments! You have respected the amount of water setted by the World Health Organization, \nwhich says that 100 liters per person per day are needed to ensure that most basic human needs.", width/2,2*height/9);  
+        text("Compliments! You have respected the amount of water setted by the World Health Organization, \nwhich says that 100 liters per person per day are needed to ensure the most basic human needs.", width/2,height/4.5);  
           
         } else {    
             
@@ -1415,12 +1416,12 @@ function draw(){
         textAlign(CENTER);
         textSize(height/15);
         textStyle(BOLD);   
-        text(userNamemaiuscola+", YOU USED "+Result+" LITERS OF WATER IN A WEEK!", width/2,height/6);
+        text(userNamemaiuscola+", YOU USED "+Result+" LITERS OF WATER IN A WEEK!", width/2,height/5.7);
         
         textStyle(NORMAL);
         textFont("Lato");
         textSize(height/100*3.2); 
-        text("Compliments! You have respected the amount of water setted by the World Health Organization, \nwhich says that 100 liters per person per day are needed to ensure that most basic human needs.", width/2,2*height/9);  
+        text("Compliments! You have respected the amount of water setted by the World Health Organization, \nwhich says that 100 liters per person per day are needed to ensure the most basic human needs.", width/2,height/4.5);  
         }
         } else if(Jack.position.y==height/2.2 && Waste<1){
         myImage.visible=false;
@@ -1855,10 +1856,12 @@ function infoBox() {
     if(pressInfo===false){
         pressInfo=true;
         document.getElementById("info").className = "infoSelected";
+        infoButton.position(width/1.218, height/7);
         buttonStart.hide();
     } else {
         pressInfo=false;
-        document.getElementById("info").className = "info"; 
+        document.getElementById("info").className = "info";
+        infoButton.position(width/18.8,height/30);
     }
 }
 
