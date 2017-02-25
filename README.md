@@ -1,4 +1,4 @@
-![GitHub Logo](/images/card.png)
+![GitHub Logo](/README/card.png)
 
 # About :fish:
 
@@ -21,16 +21,16 @@ l’unione di diversi codici
 bottoni (tipo da disattivare)
 
 ### Re used code
-![GitHub Logo](/images/p5.play3.png) | p5.play provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. We used this library to create animations for our project, to move and interact with Jack.
+![GitHub Logo](/README/p5.play3.png) | p5.play provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. We used this library to create animations for our project, to move and interact with Jack.
 ------------ | -------------
-![GitHub Logo](/images/Circular-Water-Fill-Loading-Animation.gif) | wavePercent created by Elaine. We used and modified this animation, to fill the screen.
+![GitHub Logo](/README/Circular-Water-Fill-Loading-Animation.gif) | wavePercent created by Elaine. We used and modified this animation, to fill the screen.
 
 esempi di utilizzo del codice
 
 ```
 pezzi di codice
 ```
-![GitHub Logo](/images/Jack_walk.gif)
+![GitHub Logo](/README/Jack_walk.gif)
 ```
 - es creazione animazioni, change animation…
 ```
