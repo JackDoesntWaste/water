@@ -20,6 +20,17 @@ asjdoha
 
 ## Challenges
 Bottoni (responsive, changeClasse) -> css, js
+```
+function playSound() {
+    if (mySound.isPlaying()===true) {
+        document.getElementById("sound").className = "noSound";
+        mySound.pause();
+    } else {
+        document.getElementById("sound").className = "sound";
+        mySound.loop();
+    }
+}
+```
 
 ## Resources
 ### [p5.js](https://p5js.org/)
