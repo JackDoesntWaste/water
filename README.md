@@ -63,12 +63,12 @@ CHANGE ANIMATION (piatti)
 
 GLOW <br>
 The glow è settato col tempo `timeGardenGlow = setInterval(gardenGlow,timeGlow);` e al passaggio del mouse `Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}`<br><br>
-![glow_mouse](/README/glow_mouse.gif) &nbsp; ![glow_time](/README/glow_time.gif)
+![glow_mouse](/README/glow_mouse.gif)![glow_time](/README/glow_time.gif)
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
 wavePercent created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
 
-![wavepercent](/README/wavepercent.gif) &nbsp; ![waves](/README/waves.gif)
+![wavepercent](/README/wavepercent.gif)![waves](/README/waves.gif)
 
 
 Dire magari la fonte del file musicale?
