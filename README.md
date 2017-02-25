@@ -19,7 +19,7 @@ The water waste is graphically represented using as unit a tub full of water.
 asjdoha
 
 ## Challenges
-Bottoni (responsive, changeClasse) -> css, js
+To preserve a new style when the buttons are clicked we used Javascript to change CSS class.
 ```
 function playSound() {
     if (mySound.isPlaying()===true) {
@@ -31,6 +31,13 @@ function playSound() {
     }
 }
 ```
+We used CSS to assign an image as a background of the buttons and to make them responsive.
+```
+@media screen and (max-width: 1024px)
+
+@media screen and (min-width: 1024px)
+```
+![className](/README/className.gif)
 
 ## Resources
 ### [p5.js](https://p5js.org/)
