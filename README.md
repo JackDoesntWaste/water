@@ -22,8 +22,12 @@ l’unione di diversi codici
 bottoni (tipo da disattivare)
 
 ### Resources
-#### p5
-#### p5.dom
+#### [p5](https://p5js.org/)
+#### [p5.dom](https://p5js.org/reference/#/libraries/p5.dom)
+#### [p5.sound](https://p5js.org/reference/#/libraries/p5.sound)
+```
+    analyzer.setInput(mySound);
+```
 #### [p5.play](http://p5play.molleindustria.org/)
 provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. We used this library to create animations for our project, to move and interact with Jack.
 
