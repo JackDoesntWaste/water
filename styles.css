@@ -1,6 +1,6 @@
 @media screen and (max-width: 1024px) {
 /* GENERAL */
-#loading {
+.loader {
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -221,7 +221,7 @@ input[type=range]::-webkit-slider-thumb {
 
 @media screen and (min-width: 1024px) {
 /* GENERAL */
-#loading {
+.loader {
 	position: absolute;
 	left: 0px;
 	top: 0px;
