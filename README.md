@@ -11,7 +11,7 @@ Jack drives the user in 3 different rooms of the house (bathroom, kitchen and la
 
 # Development
 
-To code the app we mostly used Javascript (in [p5.js](https://p5js.org/)) and in support to it we also used HTML and CSS.
+To code the app we mostly used Javascript (with [p5.js](https://p5js.org/)) and in support to it we also used HTML and CSS.
 
 ## Resources
 
@@ -56,9 +56,9 @@ if (pressHands==true){
 <br>
 The *glow effect* of the objects is visible after 3 seconds from the end of a previous action 
 ```
-timeSinkGlow = setInterval(sinkGlow,timeGlow)
+timeSinkGlow = setInterval(sinkGlow,timeGlow);
 ```
-or going above the object with the mouse.
+   or going above the object with the mouse.
 ```
 Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}
 ```
@@ -88,10 +88,17 @@ var kitchenData = [5,10,11,15];
 var gardenData = [12,1];
 var laundryData = [5,33,51,45,48,78,84];
 ```
+Each of these unit is multiplied with the corrisponding value of the answers provided by the user.
+
 ![dishwasherQ](/README/pressDishwasher.png)
+![handQ](/README/pressHand.png)
+
+We also defined a *default result* for each group of questions to avoid a null value in case the user doesn't answer.
+
 ## Challenges
 To preserve a new style when the buttons are clicked we used Javascript to change CSS class.
 ```
+//CSS
 .button {
     background: none;
     border: 2.5px solid;
@@ -103,7 +110,7 @@ To preserve a new style when the buttons are clicked we used Javascript to chang
     color: white;
 }
 
-
+//JAVASCRIPT
 buttonTub.addClass("button");
 buttonShower.addClass("button");
 
