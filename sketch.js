@@ -388,7 +388,7 @@ function setup() {
     
 /////////////////////////////////////////// BATHROOM - SINK
     // Bathtub - Sink    
-    Sink = createSprite(JackX,JackY,height/2.4,height/1.6); //*
+    Sink = createSprite(JackX,JackY,height/2.4,height/1.6);
     var SinkAnimation = Sink.addAnimation("Sink_before", "images/sink.png");
     Sink.addAnimation("SinkGlow", "images/sink.png", "images/sink.png", "images/sink.png", "images/sink.png", "images/sink-glow.png", "images/sink-glow.png", "images/sink-glow.png", "images/sink-glow.png");
      
@@ -683,7 +683,7 @@ function draw(){
         
 //(()) BUTTON - Start to Bathroom
     if(stateStart==true){
-        y=y-6; //REMOVE 6
+        y=y-6;
 
         if (y<-height) {
             y=-height;
@@ -696,7 +696,7 @@ function draw(){
 /////////////////////////////////////////// JACK Size
 //<3 JACK fall - resize
     if (y==0){
-        Jack.scale = width/1552;    // 0.88
+        Jack.scale = width/1552;
     } 
     if (y<0){
         Jack.scale -= 0.01;
@@ -879,7 +879,7 @@ function draw(){
     }
         
     if(pressDone2===true){
-        Sink.onMouseOver = function() {this.changeAnimation("Sink_before");}    //*
+        Sink.onMouseOver = function() {this.changeAnimation("Sink_before");}
         Sink.changeAnimation("Sink_before");
         moving=true;
         buttonBathroom.show();
@@ -891,7 +891,7 @@ function draw(){
 
 //(()) BUTTON - Bathroom to Kitchen
     if(stateBath==true){
-        x=x-10; // REMOVE 10
+        x=x-10;
         
         if (x<-width) {
             x=-width;
@@ -1014,7 +1014,7 @@ function draw(){
     
     if (pressDone3==true) {
             Dish.changeAnimation("Dish_none");
-            moving=true;  //<<AGGIUNGI
+            moving=true;
         } else if (pressHands==true){
             Dish.changeAnimation("Sink");
         } else if (pressDishwasher==true){
@@ -1119,13 +1119,13 @@ function draw(){
     }
         
     if (pressDone4==true || pressNo==true){
-        Garden.onMouseOver = function() {this.changeAnimation("Garden_closed");}    //*
+        Garden.onMouseOver = function() {this.changeAnimation("Garden_closed");}
         moving=true;
         buttonKitchen.show();
     }
                   
     if (x==-width*2 && Jack.position.x!=width/5*2 && pressDone5==false){
-        WMachine.onMouseOver = function() {this.changeAnimation("WMGlow");}     //*
+        WMachine.onMouseOver = function() {this.changeAnimation("WMGlow");} 
     }
         
     if(pressDone5==false && Jack.position.x>=width/8*7){
@@ -1135,7 +1135,7 @@ function draw(){
     
 //(()) BUTTON - Kitchen to Laundry
     if(stateKitchen==true){
-        x=x-10; // REMOVE 10
+        x=x-10;
 
         if (x<-width*2) {
             x=-width*2;
@@ -1284,7 +1284,7 @@ function draw(){
   }
   
   if(pressDone6===true){
-        Mop.onMouseOver = function() {this.changeAnimation("MopNotInUse");}     //*
+        Mop.onMouseOver = function() {this.changeAnimation("MopNotInUse");}
       
         moving=true;
         
@@ -1334,10 +1334,10 @@ function draw(){
     if (percent>=95){
         moving=false;
         if(Waste>=1){
-        Jack.scale = width/1600;    // RIMPICCIOLIRE JACK
+        Jack.scale = width/1600;
         Jack.position.x=width/6;
         }else{
-        Jack.scale = width/2000;    // RIMPICCIOLIRE JACK
+        Jack.scale = width/2000;
         Jack.position.x=width/2;    
         }
     }
@@ -1434,14 +1434,14 @@ function draw(){
             Jack.changeAnimation("moving");
             //flip horizontally
             Jack.mirrorX(-1);
-            Jack.velocity.x = - 5 // REMOVE -5
+            Jack.velocity.x = - 5
         }
         // moving right
         else if(mouseX > Jack.position.x + 10 && moving==true) {
             Jack.changeAnimation("moving");
             //unflip 
             Jack.mirrorX(1);
-            Jack.velocity.x = 5 // REMOVE 5
+            Jack.velocity.x = 5
         }
         // don't move > START
         else if (y==0){
@@ -1461,10 +1461,10 @@ function draw(){
         } 
         // don't move > toothbrush
         else if (Jack.position.x==width/10*6.5 && pressDone2==false && x==0) {
-            Sink.onMouseOver = function() {this.changeAnimation("Sink_before");}    //*
-            Sink.changeAnimation("Sink_before");    //*
+            Sink.onMouseOver = function() {this.changeAnimation("Sink_before");}
+            Sink.changeAnimation("Sink_before");
             Jack.changeAnimation("toothbrush");
-            clearInterval(timeSinkGlow);  //<< TIME
+            clearInterval(timeSinkGlow);
             speedUP=false;
             Jack.velocity.x = 0;   
         }     
@@ -1476,25 +1476,25 @@ function draw(){
         }     
         // don't move > garden
         else if (Jack.position.x==width/5*4 && x==-width && pressDone4===false) {
-            Garden.onMouseOver = function() {this.changeAnimation("Garden_open");}    //*
+            Garden.onMouseOver = function() {this.changeAnimation("Garden_open");}
             Jack.changeAnimation("garden");
-            clearInterval(timeGardenGlow);  //<< TIME
+            clearInterval(timeGardenGlow);
             speedUP=false;
             Jack.velocity.x = 0;   
         }     
         // don't move > washing machine
         else if (Jack.position.x==width/5*2 && x==-width*2 && pressDone5===false) {
-            WMachine.onMouseOver = function() {this.changeAnimation("WMOpened");}    //*
+            WMachine.onMouseOver = function() {this.changeAnimation("WMOpened");}
             Jack.changeAnimation("clothes");
-            clearInterval(timeWMGlow);  //<< TIME
+            clearInterval(timeWMGlow);
             speedUP=false;
             Jack.velocity.x = 0;   
         }     
         // don't move > mop
         else if (Jack.position.x==width/5*4 && x==-width*2 && pressDone6===false) {
-            Mop.onMouseOver = function() {this.changeAnimation("MopInUse");}    //*
+            Mop.onMouseOver = function() {this.changeAnimation("MopInUse");}
             Jack.changeAnimation("mop");
-            clearInterval(timeMopGlow);  //<< TIME
+            clearInterval(timeMopGlow);
             speedUP=false;
             Jack.velocity.x = 0;   
         }
@@ -1502,12 +1502,12 @@ function draw(){
         else if(swimming==true && moving==false && Jack.position.y > height/2.2 && Waste>=1) {
             Jack.changeAnimation("swimming");
             Jack.mirrorX(1);
-            Jack.velocity.y = - 5 // REMOVE -5
+            Jack.velocity.y = - 5
         }
         else if(swimming==true && moving==false && Jack.position.y > 5*height/8 && Waste<1) {
             Jack.changeAnimation("swimming");
             Jack.mirrorX(1);
-            Jack.velocity.y = - 5 // REMOVE -5
+            Jack.velocity.y = - 5
         }
         // swimming > stay floating > results
         else if(swimming==false && moving==false && Jack.position.y==height/2.2 && Waste>=1 && Waste<22) {
@@ -1695,8 +1695,8 @@ function Q1results(){
         document.getElementById("numBaths").style.visibility = "hidden";
         buttonDone1.hide();
         
-        timeSinkGlow = setInterval(sinkGlow,timeGlow); ///<<TIME
-        timeSinkOverGlow = setInterval(sinkOverGlow,250); ///<<TIME OVER        
+        timeSinkGlow = setInterval(sinkGlow,timeGlow);
+        timeSinkOverGlow = setInterval(sinkOverGlow,250);
     }
 }
 
@@ -1744,7 +1744,7 @@ function Q3results() {
         buttonDone3.hide();
         document.getElementById("numDishwasher").style.visibility = "hidden";
         
-        timeGardenGlow = setInterval(gardenGlow,timeGlow); ///<<TIME
+        timeGardenGlow = setInterval(gardenGlow,timeGlow);
         Garden.onMouseOver = function() {this.changeAnimation("GardenGlow");}
     }
 }
@@ -1774,7 +1774,7 @@ function noOptions() {
         buttonDone4.hide();
     }
     
-        timeWMGlow = setInterval(wmGlow,timeGlow*2.5); ///<<TIME
+        timeWMGlow = setInterval(wmGlow,timeGlow*2.5);
 }
 
 function Q4results() {
@@ -1788,7 +1788,7 @@ function Q4results() {
         buttonDone4.hide();
     }
     
-        timeWMGlow = setInterval(wmGlow,timeGlow*2.5); ///<<TIME
+        timeWMGlow = setInterval(wmGlow,timeGlow*2.5);
 }
 
 //------------------------------------------------•°o.O Laundry O.o°•
@@ -1801,7 +1801,7 @@ function Q5results() {
         document.getElementById("numWMachine").style.visibility = "hidden";
         buttonDone5.hide();
         
-        timeMopGlow = setInterval(mopGlow,timeGlow); ///<<TIME
+        timeMopGlow = setInterval(mopGlow,timeGlow);
         Mop.onMouseOver = function() {this.changeAnimation("MopGlow");}
     }
 }
