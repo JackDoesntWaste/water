@@ -83,6 +83,7 @@ We used CSS to assign an image as a background of the buttons and to make them r
 ### [p5.dom.js](https://p5js.org/reference/#/libraries/p5.dom)
 ### [p5.sound.js](https://p5js.org/reference/#/libraries/p5.sound)
 We used this library to load and analyze the sound. For example `analyzer.setInput(mySound);` allows us to play and stop the music in certain cases.
+##### Music: [Royalty Free Music from Bensound](http://www.bensound.com/royalty-free-music/track/cute)
 
 ### [p5.play.js](http://p5play.molleindustria.org/)
 provides sprites, animations, input and collision functions for games and gamelike applications. Created by Paolo Pedercini. 
@@ -125,8 +126,6 @@ The glow è settato col tempo `timeSinkGlow = setInterval(sinkGlow,timeGlow)` <b
 created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
 
 ![wavepercent](/README/wavepercent.gif)![waves](/README/waves.gif)
-<br>
-#### Music: [Royalty Free Music from Bensound](http://www.bensound.com/royalty-free-music/track/cute)
 
 # AUTHORS/TEAM
 ...is developed by:
