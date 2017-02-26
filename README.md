@@ -65,13 +65,13 @@ Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}
 <br>
 
 ### [p5.sound.js](https://p5js.org/reference/#/libraries/p5.sound)
-We used this library to load and analyze the sound. <br>
+We used this library to load and analyze the sound. <br><br>
 We added this function
 ````
 analyzer.setInput(mySound);
 ```
-to create a button to play or pause the music.<br>
-The **music** is a [Royalty Free Music from Bensound](http://www.bensound.com/royalty-free-music/track/cute).
+to create a button to play or pause the music.<br><br>
+The **music** is a Royalty Free Music from [Bensound](http://www.bensound.com/royalty-free-music/track/cute).
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
 Created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation to fill the screen of water at the end of the questions.
