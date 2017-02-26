@@ -57,7 +57,7 @@ if(pressShower===true){
     document.getElementById("buttonTub").className = "selected";
 }
 ```
-![className](/README/className.gif)<br>
+![className](/README/classname.gif)<br>
 We used CSS to assign an image as a background of the buttons and to make them responsive.
 ```
 @media screen and (max-width: 1024px)
