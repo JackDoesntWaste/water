@@ -94,6 +94,15 @@ Each of these unit is multiplied with the corrisponding value of the answers pro
 ![dishwasherQ](/README/pressDishwasher.png)
 
 We also defined a *default result* for each group of questions to avoid a null value in case the user doesn't answer.
+<br>
+At the end, the results are summed to define the amout of water used, on average, in a week
+```
+Result = resultMop + resultWMachine + resultGarden + resultDishwasher + resultHand + resultTeeth + resultBath + resultShower;
+```
+and at this result are subtracted 700 liters of water (the necessary amount for persons setted by the World Health Organization).
+```
+var WaterWaste =Math.round(Result - 700,1);
+```
 
 ## Challenges
 To preserve a new style when the buttons are clicked we used Javascript to change CSS class.
