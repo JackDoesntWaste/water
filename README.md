@@ -81,7 +81,7 @@ This is not a library, but an open source code from [CodePen](http://codepen.io/
 ![wavepercent](/README/wavepercent.gif)![waves](/README/waves.gif)
 
 ## Data
-To calculate the amount of water used by the user, we add to the code some arrays with the units of water used for different situation (take a shower, brushing teeth, run the dishwasher ...).
+To calculate the amount of water used by the user, we add to the code some arrays with the units of water of different situation (take a shower, brushing teeth, run the dishwasher ...).
 ```
 var bathroomData = [5, 150, 80];
 var kitchenData = [5,10,11,15];
@@ -99,7 +99,7 @@ At the end, the results are summed to define the amout of water used, on average
 ```
 Result = resultMop + resultWMachine + resultGarden + resultDishwasher + resultHand + resultTeeth + resultBath + resultShower;
 ```
-and at this result are subtracted 700 liters of water (the necessary amount for persons setted by the World Health Organization).
+and at this result are subtracted 700 liters of water (the necessary amount for persons setted by the World Health Organization) to show in tubs the water wasted.
 ```
 var WaterWaste =Math.round(Result - 700,1);
 ```
