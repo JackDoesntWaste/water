@@ -88,7 +88,7 @@ var kitchenData = [5,10,11,15];
 var gardenData = [12,1];
 var laundryData = [5,33,51,45,48,78,84];
 ```
-
+![dishwasherQ](/README/pressDishwasher.png)
 ## Challenges
 To preserve a new style when the buttons are clicked we used Javascript to change CSS class.
 ```
