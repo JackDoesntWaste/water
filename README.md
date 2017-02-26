@@ -21,21 +21,34 @@ asjdoha
 ## Challenges
 To preserve a new style when the buttons are clicked we used Javascript to change CSS class.
 ```
-function playSound() {
-    if (mySound.isPlaying()===true) {
-        document.getElementById("sound").className = "noSound";
-        mySound.pause();
-    } else {
-        document.getElementById("sound").className = "sound";
-        mySound.loop();
-    }
+buttonTub.addClass("button");
+buttonShower.addClass("button");
+
+if(pressShower===true){
+    document.getElementById("buttonShower").className = "selected"; 
+    document.getElementById("buttonTub").className = "button";
+} else if(pressTub===true){
+    document.getElementById("buttonShower").className = "button";
+    document.getElementById("buttonTub").className = "selected";
 }
 ```
 We used CSS to assign an image as a background of the buttons and to make them responsive.
 ```
 @media screen and (max-width: 1024px)
+.info {
+    background-image: url(images/info_20.png);
+}
+ .sound {
+    background-image: url(images/audio_play_20.png);
+}
 
 @media screen and (min-width: 1024px)
+.info {
+    background-image: url(images/info_25.png);
+}
+.sound {
+    background-image: url(images/audio_play_25.png);
+}
 ```
 ![className](/README/className.gif)
 
@@ -68,14 +81,13 @@ if(mouseX > Jack.position.x + 10 && moving==true) {
 
 #### Change animation
 ```
-    if (pressDone3==true) {
-            Dish.changeAnimation("Dish_none");
-            moving=true;
-        } else if (pressHands==true){
-            Dish.changeAnimation("Sink");
-        } else if (pressDishwasher==true){
-            Dish.changeAnimation("Dishwasher");
-        }
+Dish.addAnimation("Dish_none", "images/dish.png");
+
+if (pressHands==true){
+    Dish.changeAnimation("Sink");
+} else if (pressDishwasher==true){
+    Dish.changeAnimation("Dishwasher");
+}
 ```
 ![GitHub Logo](/README/changeanimation.gif)
 
