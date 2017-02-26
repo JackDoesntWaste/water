@@ -51,7 +51,7 @@ if (pressHands==true){
 ```
 ![GitHub Logo](/README/changeanimation.gif)
 
-* **SetInterval and onMouseOver** <br><br>
+* **SetInterval and onMouseOver** 
 The *glow effect* of the objects is visible after 3 seconds from the end of a previous action 
 ```
 timeSinkGlow = setInterval(sinkGlow,timeGlow)
