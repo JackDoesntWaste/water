@@ -48,7 +48,7 @@ body {
     border: none;
     color: #677f8c;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1em;
     border-bottom: 2px solid;
 }
 
@@ -110,7 +110,7 @@ input[type=range]::-webkit-slider-thumb {
 
 /* ADDITIONAL BUTTONS - INFO/SOUND */
 #seeCode {
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: center;
     color: #677F8C;
     background: none;
