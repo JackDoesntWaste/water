@@ -76,12 +76,18 @@ to analyze the sound and to play or pause it.<br><br>
 The **music** is a Royalty Free Music from [Bensound](http://www.bensound.com/royalty-free-music/track/cute).
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
-This is not a library, but an open source code from [CodePen](http://codepen.io/) created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation to fill the screen of water before the results.
+This is not a library, but an open source code from [CodePen](http://codepen.io/) created by [Elaine](http://codepen.io/ElaineXu/). <br> We used and modified this animation to fill the screen of water before the results.
 
 ![wavepercent](/README/wavepercent.gif)![waves](/README/waves.gif)
 
 ## Data
-asjdoha
+To calculate the amount of water used by the user, we add to the code some arrays with the units of water used for different situation (take a shower, brushing teeth, run the dishwasher ...).
+```
+var bathroomData = [5, 150, 80];
+var kitchenData = [5,10,11,15];
+var gardenData = [12,1];
+var laundryData = [5,33,51,45,48,78,84];
+```
 
 ## Challenges
 To preserve a new style when the buttons are clicked we used Javascript to change CSS class.
