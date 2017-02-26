@@ -68,16 +68,16 @@ var pressDone2=false;
 //-----> INPUT Kitchen
 var kitchenData = [5,10,11,15];
 var gardenData = [12,1];
-var buttonHands, buttonDishwasher, handsSlider, selDishwasher, buttonDone3;
-var handsMinutes, dishwasherProgram, handsWeek, dishwasherWeek;
-var defaultHands = 500;
+var buttonHand, buttonDishwasher, handSlider, selDishwasher, buttonDone3;
+var handMinutes, dishwasherProgram, handWeek, dishwasherWeek;
+var defaultHand = 500;
 var defaultDishwasher = 77;
 var buttonYes, buttonNo, selGarden, gardenSlider, buttonDone4;
 var sizeGarden, gardenMinutes, waterGarden;
 var defaultGarden = 1000;
-var myHands, myDishwasher, myGarden;
-var resultHands, resultDishwasher, resultGarden;
-var pressHands=false;
+var myHand, myDishwasher, myGarden;
+var resultHand, resultDishwasher, resultGarden;
+var pressHand=false;
 var pressDishwasher=false;
 var pressDone3=false;
 var pressYes=false;
@@ -296,13 +296,13 @@ function setup() {
     
 //-----> INPUT Kitchen
     // > Dish
-    buttonHands = createButton("By hand");
-    buttonHands.addClass("button");
-    buttonHands.id("buttonHands");
-    buttonHands.size(width/10,height/18);
-    buttonHands.position(width/1.64,height/5.3);
-    buttonHands.mousePressed(handsOptions);
-    buttonHands.hide();
+    buttonHand = createButton("By hand");
+    buttonHand.addClass("button");
+    buttonHand.id("buttonHand");
+    buttonHand.size(width/10,height/18);
+    buttonHand.position(width/1.64,height/5.3);
+    buttonHand.mousePressed(handOptions);
+    buttonHand.hide();
     
     buttonDishwasher = createButton("Dishwasher");
     buttonDishwasher.addClass("button");
@@ -312,10 +312,10 @@ function setup() {
     buttonDishwasher.mousePressed(dishwasherOptions);
     buttonDishwasher.hide();
     
-    handsSlider = createSlider(1,40,10);
-    handsSlider.position(width/1.64,height/2.55);
-    handsSlider.size(width/8,0);
-    handsSlider.hide();
+    handSlider = createSlider(1,40,10);
+    handSlider.position(width/1.64,height/2.55);
+    handSlider.size(width/8,0);
+    handSlider.hide();
     
     selDishwasher = createSelect();
     selDishwasher.addClass("selection");
@@ -927,24 +927,24 @@ function draw(){
         pop();
             
         text("How do you wash your dishes?", width/1.64,height/6.2);
-        buttonHands.show();
+        buttonHand.show();
         buttonDishwasher.show();
     
-        if(pressHands===true){
-            document.getElementById("buttonHands").className = "selected"; 
+        if(pressHand===true){
+            document.getElementById("buttonHand").className = "selected"; 
             document.getElementById("buttonDishwasher").className = "button";
  
             text("How long do you leave the tap running\nwhile you are doing your dishes?", width/1.64,height/3.3);
         
-            handsSlider.show();
-            handsMinutes = handsSlider.value();
+            handSlider.show();
+            handMinutes = handSlider.value();
             
             push();
             textSize(height/100*2.2);
-            if(handsMinutes===1){
-                text(handsMinutes+" minute",width/1.34,height/2.5);
+            if(handMinutes===1){
+                text(handMinutes+" minute",width/1.34,height/2.5);
             } else {
-                text(handsMinutes+" minutes",width/1.34,height/2.5);
+                text(handMinutes+" minutes",width/1.34,height/2.5);
             }
             pop();
         
@@ -953,7 +953,7 @@ function draw(){
         }
     
         if(pressDishwasher===true){
-            document.getElementById("buttonHands").className = "button"; 
+            document.getElementById("buttonHand").className = "button"; 
             document.getElementById("buttonDishwasher").className = "selected"; 
     
             text("Set the dishwasher program…", width/1.64,height/3.3);
@@ -988,7 +988,7 @@ function draw(){
         
         myDishwasher = week * dishwasherWeek * dishwasherProgram;
         
-        resultHands = 0;
+        resultHand = 0;
         
         if(myDishwasher !== 0 && myDishwasher !== defaultDishwasher){
           resultDishwasher = myDishwasher;
@@ -996,26 +996,26 @@ function draw(){
 
       }
       
-      if(pressHands===true){
+      if(pressHand===true){
         
-        handsMinutes = handsSlider.value();
+        handMinutes = handSlider.value();
         
-        handsWeek = 10;
+        handWeek = 10;
         
-        myHands = week * handsWeek * handsMinutes * kitchenData[0];
+        myHand = week * handWeek * handMinutes * kitchenData[0];
             
         resultDishwasher = 0;
         
-        if(myHands !== 0 && myHands !== defaultHands){
-          resultHands = myHands;
-        } else { resultHands = defaultHands; }
+        if(myHand !== 0 && myHand !== defaultHand){
+          resultHand = myHand;
+        } else { resultHand = defaultHand; }
         
       }
     
     if (pressDone3==true) {
             Dish.changeAnimation("Dish_none");
             moving=true;
-        } else if (pressHands==true){
+        } else if (pressHand==true){
             Dish.changeAnimation("Sink");
         } else if (pressDishwasher==true){
             Dish.changeAnimation("Dishwasher");
@@ -1305,7 +1305,7 @@ function draw(){
 /////////////////////////////////////////// RESULTS
 // RESULTS
     if (pressDone6===true){
-        Result = resultMop + resultWMachine + resultGarden + resultDishwasher + resultHands + resultTeeth + resultBath + resultShower;
+        Result = resultMop + resultWMachine + resultGarden + resultDishwasher + resultHand + resultTeeth + resultBath + resultShower;
         
         userName = document.getElementById("inputName").value;
         userNamemaiuscola = userName.toUpperCase();
@@ -1561,7 +1561,7 @@ function draw(){
         push();
         noStroke();
         fill(255);
-        rect(200, 75, width-400, height-150, 30);
+        rect(width/10, height/12, width/1.3, height/1.2, 30);
         pop();
         
         image(Jack_info,width/4.3,height/4.2,width/6.5,width/3.5);
@@ -1570,6 +1570,7 @@ function draw(){
         textSize(height/100*2.5);
         fill("#58595b");
         textFont("Lato");
+        textAlign(LEFT);
         textStyle(BOLD);
         text("WHAT?",width/2.1,height/3.8);
         pop();
@@ -1578,13 +1579,15 @@ function draw(){
         textSize(height/100*2.5);
         fill("#58595b");
         textFont("Lato");
-        text("This is a university project built in p5.js during the\ncourse Creative Coding at the Politecnico di Milano.\n\nJack will drive you in 3 different rooms where you\nhave to answer questions about your habits.\nAt the end you'll find out how much water you waste\nin average in a week.", width/2.1,height/3.3);
+        textAlign(LEFT);
+        text("This is a university project built in p5.js during the\ncourse Creative Coding at the Politecnico di Milano.\n\nJack will drive you in 3 different rooms where you\nhave to answer questions about your habits.\nAt the end you'll find out how much water you waste,\nin average, in a week.", width/2.1,height/3.3);
         pop();
         
         push();
         textSize(height/100*2.5);
         fill("#58595b");
         textFont("Lato");
+        textAlign(LEFT);
         textStyle(BOLD);
         text("WHO?",width/2.1,height/1.78);
         pop();
@@ -1593,6 +1596,7 @@ function draw(){
         textSize(height/100*2.5);
         fill("#58595b");
         textFont("Lato");
+        textAlign(LEFT);
         text("The project is developed by:\n•  Mara Cominardi\n•  Chiara Riente\n•  Sara Pizzatti", width/2.1,height/1.65);
         pop();
         
@@ -1603,7 +1607,7 @@ function draw(){
         buttonShower.hide();
         buttonTub.hide();
         buttonDishwasher.hide();
-        buttonHands.hide();
+        buttonHand.hide();
         buttonYes.hide();
         buttonNo.hide();
         buttonDone1.hide();
@@ -1615,7 +1619,7 @@ function draw(){
         showerSlider.hide();
         selTub.hide();
         teethSlider.hide();
-        handsSlider.hide();
+        handSlider.hide();
         selDishwasher.hide();
         selGarden.hide();
         gardenSlider.hide();
@@ -1624,6 +1628,11 @@ function draw(){
         mopSlider.hide();
         buttonBathroom.hide();
         buttonKitchen.hide();
+        restartButton.hide();
+        shareButton.hide();
+        fbButton.hide();
+        twButton.hide();
+        pinButton.hide();
         document.getElementById("inputName").style.visibility = "hidden";
         document.getElementById("numBaths").style.visibility = "hidden";
         document.getElementById("numShower").style.visibility = "hidden";
@@ -1709,27 +1718,27 @@ function Q2results(){
 }
 
 //------------------------------------------------•°o.O Kitchen O.o°•
-function handsOptions() {
-    if(pressHands===false && pressDishwasher===false){
+function handOptions() {
+    if(pressHand===false && pressDishwasher===false){
         pressDishwasher===false;
-        handsSlider.hide();
-        pressHands=true;
-    } else if(pressHands===false && pressDishwasher===true){
+        handSlider.hide();
+        pressHand=true;
+    } else if(pressHand===false && pressDishwasher===true){
         pressDishwasher=false;
         selDishwasher.hide();
         document.getElementById("numDishwasher").style.visibility = "hidden";
-        pressHands=true;
+        pressHand=true;
     }
 }
 
 function dishwasherOptions() {
-    if(pressDishwasher===false && pressHands===false){
-        pressHands===false;
+    if(pressDishwasher===false && pressHand===false){
+        pressHand===false;
         selDishwasher.hide();
         pressDishwasher=true;
-    } else if(pressDishwasher===false && pressHands===true){
-        pressHands=false;
-        handsSlider.hide();
+    } else if(pressDishwasher===false && pressHand===true){
+        pressHand=false;
+        handSlider.hide();
         pressDishwasher=true;
     }
 }
@@ -1737,9 +1746,9 @@ function dishwasherOptions() {
 function Q3results() {
     if(pressDone3===false){
         pressDone3=true;
-        buttonHands.hide();
+        buttonHand.hide();
         buttonDishwasher.hide();
-        handsSlider.hide();
+        handSlider.hide();
         selDishwasher.hide();
         buttonDone3.hide();
         document.getElementById("numDishwasher").style.visibility = "hidden";
