@@ -157,6 +157,7 @@ We used CSS to assign an image as a background of the buttons and to make them r
 * Mara Cominardi [@phoenis](https://github.com/phoenis) 
 * Chiara Riente [@chiarariente](https://github.com/chiarariente) 
 * Sara Pizzatti [@sarapizzatti93](https://github.com/sarapizzatti93) 
-
-
+<br>
+<br>
+<br>
 ####And you, do you know how much water do you use? 
