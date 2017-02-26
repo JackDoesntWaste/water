@@ -2,8 +2,7 @@
 
 # About
 
-**Jack doesn't waste** is a university project built in [p5.js](https://p5js.org/) during the course *Creative Coding* at the Politecnico di Milano. <br>
-The goal was to develop an interactive app about an ***out of scale*** topic. 
+**Jack doesn't waste** is a university project built in [p5.js](https://p5js.org/) during the course *Creative Coding* at the Politecnico di Milano. The goal was to develop an interactive app about an ***out of scale*** topic. 
 
 # Project idea
 
