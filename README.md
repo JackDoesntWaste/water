@@ -52,7 +52,7 @@ if (pressHands==true){
 ```
 ![GitHub Logo](/README/changeanimation.gif)
 
-* **SetInterval and onMouseOver** <br>
+* **SetInterval and onMouseOver** <br><br>
 The *glow effect* of the objects is visible after 3 seconds from the end of a previous action 
 ```
 timeSinkGlow = setInterval(sinkGlow,timeGlow)
@@ -61,7 +61,7 @@ or going above the object with the mouse.
 ```
 Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}
 ```
-<br><br>
+<br>
 ![glow_time](/README/glow_time.gif)![glow_mouse](/README/glow_mouse.gif)
 <br>
 
