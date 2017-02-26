@@ -99,7 +99,7 @@ At the end, the results are summed to define the amout of water used, on average
 ```
 Result = resultMop + resultWMachine + resultGarden + resultDishwasher + resultHand + resultTeeth + resultBath + resultShower;
 ```
-and at this result are subtracted 700 liters of water (the necessary amount for persons setted by the World Health Organization) to show the amount wasted. Every 100 liters of water wasted is represented by a tub.
+and at this result are subtracted 700 liters of water (the necessary amount for person setted by the World Health Organization) to show the amount wasted. Every 100 liters of water wasted is represented by a tub.
 ```
 var WaterWaste =Math.round(Result - 700, 1);
 ```
