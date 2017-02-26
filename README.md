@@ -108,13 +108,14 @@ if (pressHands==true){
 #### SetInterval and onMouseOver<br>
 The glow è settato col tempo `timeSinkGlow = setInterval(sinkGlow,timeGlow)` <br>e al passaggio del mouse `Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}`<br><br>
 ![glow_time](/README/glow_time.gif)![glow_mouse](/README/glow_mouse.gif)
+<br>
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
 created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation, to fill the screen.
 
 ![wavepercent](/README/wavepercent.gif)![waves](/README/waves.gif)
 
-# AUTHORS/TEAM
+# Autors/Team
 ...is developed by:
 * Mara Cominardi [@phoenis](https://github.com/phoenis) 
 * Chiara Riente [@chiarariente](https://github.com/chiarariente) 
