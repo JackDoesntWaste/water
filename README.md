@@ -22,27 +22,14 @@ asjdoha
 To preserve a new style when the buttons are clicked we used Javascript to change CSS class.
 ```
 .button {
-    font-family: 'Dosis', sans-serif;
-    font-weight: bolder;
-    text-transform: uppercase;
     background: none;
     border: 2.5px solid;
     color: #677f8c;
-    text-align: center;
-    font-size: 1.2em;
-    border-radius: 5px;
 }
 .selected {	
-    font-family: 'Dosis', sans-serif;
-    font-weight: bolder;
-    text-transform: uppercase;
     background-color: #677f8c;
     border: #677f8c 2.5px solid;
     color: white;
-    text-align: center;
-    font-size: 1.2em;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 
