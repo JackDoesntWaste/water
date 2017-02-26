@@ -131,7 +131,7 @@ if(pressShower===true){
     document.getElementById("buttonTub").className = "selected";
 }
 ```
-![className](/README/classname.gif)<br>
+![className](/README/classname.gif)<br><br><br>
 We add to the code also some clickable icons, like the *info button* and the *play/pause sound*. To create them, we used the CSS and we put the icon images in the background of the buttons. <br>
 We also make them responsive using the `@media` query.
 ```
