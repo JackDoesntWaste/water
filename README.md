@@ -70,7 +70,7 @@ We added this function
 ````
 analyzer.setInput(mySound);
 ```
-to create a button to play or pause the music.<br><br>
+to analyze the sound and to play or pause it.<br><br>
 The **music** is a Royalty Free Music from [Bensound](http://www.bensound.com/royalty-free-music/track/cute).
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
