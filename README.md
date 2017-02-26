@@ -90,8 +90,8 @@ var laundryData = [5,33,51,45,48,78,84];
 ```
 Each of these unit is multiplied with the corrisponding value of the answers provided by the user.
 
-![dishwasherQ](/README/pressDishwasher.png)
 ![handQ](/README/pressHand.png)
+![dishwasherQ](/README/pressDishwasher.png)
 
 We also defined a *default result* for each group of questions to avoid a null value in case the user doesn't answer.
 
