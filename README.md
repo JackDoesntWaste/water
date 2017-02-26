@@ -74,7 +74,7 @@ to create a button to play or pause the music.<br><br>
 The **music** is a Royalty Free Music from [Bensound](http://www.bensound.com/royalty-free-music/track/cute).
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
-Created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation to fill the screen of water at the end of the questions.
+This is not a library, but an open source code from [CodePen](http://codepen.io/) created by [Elaine](http://codepen.io/ElaineXu/). We used and modified this animation to fill the screen of water before the results.
 
 ![wavepercent](/README/wavepercent.gif)![waves](/README/waves.gif)
 
