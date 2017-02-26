@@ -105,7 +105,7 @@ var WaterWaste =Math.round(Result - 700, 1);
 ```
 
 ## Challenges
-To preserve a new style when the buttons are clicked we used Javascript to change CSS class.
+To maintain visually activates the selected answer, we used Javascript to change the CSS class of the clicked buttons and add them a different style from the others.
 ```
 /* CSS */
 .button {
@@ -132,7 +132,8 @@ if(pressShower===true){
 }
 ```
 ![className](/README/classname.gif)<br>
-We used CSS to assign an image as a background of the buttons and to make them responsive.
+We add to the code also some clickable icons, like the *info button* and the *play/pause sound*. To create them, we used the CSS and we put the icon images in the background of the buttons. <br>
+We also make them responsive using the `@media` query.
 ```
 @media screen and (max-width: 1024px)
 .info {
@@ -158,4 +159,4 @@ We used CSS to assign an image as a background of the buttons and to make them r
 * Chiara Riente [@chiarariente](https://github.com/chiarariente) 
 * Sara Pizzatti [@sarapizzatti93](https://github.com/sarapizzatti93) <br><br><br>
 
-####And you, do you know how much water do you use? 
+###And you, do you know how much water do you use? 
