@@ -18,8 +18,7 @@ To code the app we mostly used Javascript (in [p5.js](https://p5js.org/)) and in
 
 ### [p5.play.js](http://p5play.molleindustria.org/)
 
-Initiated by Paolo Pedercini, this library provides a *Sprite* class to manage visual objects in 2D space, to create animations and to help mouse and keyboard interactions. <br>
-p5.play.js is perfect for the creation of games and playthings.
+Initiated by Paolo Pedercini, this library provides a *Sprite* class to manage visual objects in 2D space, to create animations and to help mouse and keyboard interactions. p5.play.js is perfect for the creation of games and playthings.
 
 We used this library to add animations to Jack and to the other objects, as well as to simulate a playful experience giving the chance to interact with the characters.
 
