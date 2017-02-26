@@ -101,7 +101,7 @@ Result = resultMop + resultWMachine + resultGarden + resultDishwasher + resultHa
 ```
 and at this result are subtracted 700 liters of water (the necessary amount for persons setted by the World Health Organization) to show in tubs the water wasted.
 ```
-var WaterWaste =Math.round(Result - 700,1);
+var WaterWaste =Math.round(Result - 700, 1);
 ```
 
 ## Challenges
