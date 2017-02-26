@@ -118,7 +118,7 @@ if (pressHands==true){
 ![GitHub Logo](/README/changeanimation.gif)
 
 #### SetInterval and onMouseOver<br>
-The glow è settato col tempo `timeSinkGlow = setInterval(sinkGlow,timeGlow)` e al passaggio del mouse `Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}`<br><br>
+The glow è settato col tempo `timeSinkGlow = setInterval(sinkGlow,timeGlow)` <br>e al passaggio del mouse `Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}`<br><br>
 ![glow_time](/README/glow_time.gif)![glow_mouse](/README/glow_mouse.gif)
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
