@@ -2,7 +2,7 @@
 
 # About
 
-Title is a university project built in [p5.js](https://p5js.org/) during the course *Creative Coding* at the Politecnico di Milano. <br>
+**Water** is a university project built in [p5.js](https://p5js.org/) during the course *Creative Coding* at the Politecnico di Milano. <br>
 The goal was to develop an interactive app about an ***out of scale*** topic. 
 
 # Project idea
@@ -85,7 +85,7 @@ Jack.addAnimation("moving", "images/Jack_walk1.png", "images/Jack_walk2.png");
 
 #### Set velocity to animation
 ```
-if(mouseX > Jack.position.x + 10 && moving==true) {
+if(mouseX > Jack.position.x + 10) {
     Jack.changeAnimation("moving");
     Jack.mirrorX(1);
     Jack.velocity.x = 5
