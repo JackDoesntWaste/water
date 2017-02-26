@@ -6,7 +6,7 @@
 
 # Project idea
 
-The theme we choose is the **waste of water** for domestic consumption. The user has the chance to take an experience otherwise impossible through a guided path that allows him to find out how much water he uses, on average. <br>
+The theme we choose is the **waste of water for domestic consumption**. The user has the chance to take an experience otherwise impossible through a guided path that allows him to find out how much water he uses, on average. <br>
 Jack drives the user in 3 different rooms of the house (bathroom, kitchen and laundry room). There the user has to answer questions about his weekly use of water. The experience ends showing him how much water was used and wasted in 1 week. <br>
 The water waste is graphically represented using as unit a tub full of water.  
 
