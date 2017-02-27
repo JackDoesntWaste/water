@@ -520,7 +520,32 @@ function draw(){
         textStyle(NORMAL);
         textFont("Lato");
         fill(255);
-        text("We are sorry,\nbut this website is not yet\navailable on the mobile.",width/2,height/2);
+        text("We are sorry,\nbut this website is not yet\navailable on mobile.",width/2,height/2);
+        fill(0, 102, 153);
+        pop();
+        
+        buttonStart.hide();
+        document.getElementById("inputName").style.visibility='hidden';
+        mySound.stop();
+        infoButton.hide();
+        soundButton.hide();
+        
+        Jack.visible=false;
+        Bath.visible=false;
+        Dish.visible=false;
+        Garden.visible=false;
+        WMachine.visible=false;
+        Mop.visible=false;
+        
+        drawSprites();
+    } else if (width/height < 1.75) {
+        push();
+        textSize(width/18);
+        textAlign(CENTER);
+        textStyle(NORMAL);
+        textFont("Lato");
+        fill(255);
+        text("Please,\nextend and refresh\nyour browser window.",width/2,height/2);
         fill(0, 102, 153);
         pop();
         
