@@ -7,7 +7,7 @@
 # Project idea
 
 The theme we choose is the **waste of water for domestic consumption**. The user has the chance to take an experience otherwise impossible through a guided path that allows him to find out how much water he uses. <br>
-Jack drives the user in 3 different rooms of the house (bathroom, kitchen and laundry room). There the user has to answer questions about his weekly use of water. The experience ends showing him how much water was used and wasted in 1 week. The water waste is graphically represented using as unit a tub full of water.  
+Jack drives the user in three different rooms of the house (bathroom, kitchen and laundry room). There the user has to answer questions about his weekly use of water. The experience ends showing him how much water was used and wasted in a week. The water waste is graphically represented using as unit a tub full of water.  
 
 # Development
 
@@ -17,7 +17,7 @@ To code the app we mostly used Javascript (with [p5.js](https://p5js.org/)) and 
 
 ### [p5.play.js](http://p5play.molleindustria.org/)
 
-Initiated by Paolo Pedercini, this library provides a *Sprite* class to manage visual objects in 2D space, to create animations and to help mouse and keyboard interactions. p5.play.js is perfect for the creation of games and playthings.
+Created by Paolo Pedercini, this library provides a *Sprite* class to manage visual objects in 2D space, to create animations and to help mouse and keyboard interactions. p5.play.js is perfect for the creation of games and playthings.
 
 We used this library to add animations to Jack and to the other objects, as well as to simulate a playful experience giving the chance to interact with the characters.
 
@@ -68,12 +68,12 @@ Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}
 
 ### [p5.sound.js](https://p5js.org/reference/#/libraries/p5.sound)
 We used this library to load and analyze the sound. <br><br>
-We added this function
+Thanks to this function
 ````
 analyzer.setInput(mySound);
 ```
-to analyze the sound and to play or pause it.<br><br>
-The **music** is a Royalty Free Music from [Bensound](http://www.bensound.com/royalty-free-music/track/cute).
+we can analyze the sound and the user can play or pause it.<br><br>
+The **music** is a *Royalty Free Music* from [Bensound](http://www.bensound.com/royalty-free-music/track/cute).
 
 ### [wavePercent](http://codepen.io/ElaineXu/pen/jAzGAw)
 This is not a library, but an open source code from [CodePen](http://codepen.io/) created by [Elaine](http://codepen.io/ElaineXu/). <br> We used and modified this animation to fill the screen of water before the results.
@@ -94,8 +94,8 @@ Each of these unit is multiplied with the corrisponding value of the answers pro
 ![dishwasherQ](/README/pressDishwasher.png)
 
 We also defined a *default result* for each group of questions to avoid a null value in case the user doesn't answer.
-<br>
-At the end, the results are summed to define the amout of water used, on average, in a week
+<br><br>
+At the end, the results are summed to define the amount of water used, on average, in a week
 ```
 Result = resultMop + resultWMachine + resultGarden + resultDishwasher + resultHand + resultTeeth + resultBath + resultShower;
 ```
@@ -105,7 +105,7 @@ var WaterWaste =Math.round(Result - 700, 1);
 ```
 
 ## Challenges
-To maintain visually activates the selected answer, we used Javascript to change the CSS class of the clicked buttons and add them a different style from the others.
+To maintain visually activated the selected answer, we used Javascript to change the CSS class of the clicked buttons and to add them a different style from the others.
 ```
 /* CSS */
 .button {
