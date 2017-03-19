@@ -69,7 +69,7 @@ Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}
 ### [p5.sound.js](https://p5js.org/reference/#/libraries/p5.sound)
 We used this library to load and analyze the sound. <br><br>
 Thanks to this function 
-````
+```
 analyzer.setInput(mySound);
 ```
 we can analyze the sound and the user can play or pause it.<br><br>
