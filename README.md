@@ -68,7 +68,7 @@ Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}
 
 ### [p5.sound.js](https://p5js.org/reference/#/libraries/p5.sound)
 We used this library to load and analyze the sound. <br><br>
-Thanks to this function
+Thanks to this function 
 ````
 analyzer.setInput(mySound);
 ```
