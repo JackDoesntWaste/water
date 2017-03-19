@@ -157,3 +157,4 @@ We also make them responsive using the `@media` query.
 * Sara Pizzatti [@sarapizzatti93](https://github.com/sarapizzatti93) <br><br><br>
 
 ### And you, do you know how much water do you use? 
+Share your result with the hashtags **#JackDoesntWaste #beLikeJack**
