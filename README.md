@@ -52,8 +52,6 @@ if (pressHands==true){
 ![GitHub Logo](/README/changeanimation.gif)
 
 * **SetInterval and onMouseOver** 
-<br>
-<br>
 The *glow effect* of the objects is visible after 3 seconds from the end of a previous action 
 ```
 timeSinkGlow = setInterval(sinkGlow,timeGlow);
@@ -62,9 +60,8 @@ timeSinkGlow = setInterval(sinkGlow,timeGlow);
 ```
 Sink.onMouseOver = function() {this.changeAnimation("SinkGlow");}
 ```
-<br>
 ![glow_time](/README/glow_time.gif)![glow_mouse](/README/glow_mouse.gif)
-<br>
+
 
 ### [p5.sound.js](https://p5js.org/reference/#/libraries/p5.sound)
 We used this library to load and analyze the sound. <br><br>
@@ -159,4 +156,4 @@ We also make them responsive using the `@media` query.
 * Chiara Riente [@chiarariente](https://github.com/chiarariente) 
 * Sara Pizzatti [@sarapizzatti93](https://github.com/sarapizzatti93) <br><br><br>
 
-###And you, do you know how much water do you use? 
+### And you, do you know how much water do you use? 
